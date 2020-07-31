@@ -35,7 +35,6 @@ basecor<-select(data,m_nse, nse, m_cult_part, m_apert_disc, m_esp_part,m_nse, PV
 
 datacor<-cor(basecor)
 datacor <- corrplot.mixed(datacor)
-ggsave(datacor, file = "../output/graphs/graph_cor.png",device = "png",width = 35,height = 25,dpi = "retina",units = "cm")
 ```
 
 # Análisis multinivel
