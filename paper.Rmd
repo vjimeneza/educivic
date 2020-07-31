@@ -2,7 +2,7 @@
 title: "¿Qué pueden hacer las escuelas para disminuir la desigualdad en el conocimiento cívico?"
 author: "Yanara Jerez, Adonai Arancibia, Anais Herrera, Francisco Meneses y Victor Jimenez"
 date: "31 de julio de 2020"
-output: 
+output:
   html_document:
      theme: flatly
      highlight: tango
@@ -285,7 +285,18 @@ Al incorporarse las variables de nivel 2, se reconoce la misma relación entre v
 
 ### Comparación de modelos 6-8 
 
-![Comparación de modelo: pendiente aleatoria e interacción](output/graphs/comp_model.Rdata) 
+```{r results='asis'}
+library(texreg)
+
+load(file = "output/graphs/results_6.Rdata")
+load(file = "output/graphs/results_7.Rdata")
+load(file = "output/graphs/results_8.Rdata")
+
+
+load(file = "output/graphs/comp_model.Rdata")
+htmlreg(list(results_6,results_7,results_8), caption = "Comparación de modelo: pendiente aleatoria e interacción") 
+
+```
 
 En la tabla 3 se presentan dos modelos adicionales. Los modelos anteriores daban cuenta de la influencia de variables de nivel 2 sobre el intercepto de la variable dependiente. Por su parte, estos nuevos modelos profundizan en la influencia de estas variables incorporando aleatorización y moderación.
 

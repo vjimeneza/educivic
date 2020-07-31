@@ -96,8 +96,10 @@ webshot("../output/graphs/reg1.html","../output/graphs/reg1.png")
 
 ## ComparaciC3n de modelos 6-8
 ```{r results='asis'}
-comp_model< list(results_6,results_7,results_8)
-save(comp_model, file = "../output/graphs/comp_model.Rdata")
+save(results_6, file = "../output/graphs/results_6.Rdata")
+save(results_7, file = "../output/graphs/results_7.Rdata")
+save(results_8, file = "../output/graphs/results_8.Rdata")
+
 ```
 
 ## Plot
