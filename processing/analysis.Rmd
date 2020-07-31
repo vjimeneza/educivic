@@ -23,9 +23,11 @@ load(file="../input/data/proc/data.Rdata")
 ```
 
 # Análisis descriptivo
-```{r results='asis'}
+```{r}
 summary(data)
-stargazer(data, title="Estadísticos descriptivos", type = "html")
+```
+
+```{r}
 hist(data$PV1CIV)
 ```
 
@@ -35,15 +37,14 @@ basecor<-select(data,m_nse, nse, m_cult_part, m_apert_disc, m_esp_part,m_nse, PV
 
 datacor<-cor(basecor)
 datacor <- corrplot.mixed(datacor)
-ggsave(datacor, file = "../output/graphs/graph_cor.png",device = "png",width = 35,height = 25,dpi = "retina",units = "cm")
+
 ```
 
 # Análisis multinivel
 ## Modelo nulo  
-```{r}
+```{r results='asis'}
 results_0 = lmer(PV1CIV ~ 1 + (1| idschool), data = data, REML=F)
-summary(results_0)
-screenreg(results_0) 
+htmlreg(results_0) 
 ```
 
 ## Correlación intraclase  
