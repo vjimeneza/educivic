@@ -1,0 +1,323 @@
+---
+title: "¿Qué pueden hacer las escuelas para disminuir la desigualdad en el conocimiento cívico?"
+author: "Yanara Jerez, Adonai Arancibia, Anais Herrera, Francisco Meneses y Victor Jimenez"
+date: "31 de julio de 2020"
+output: 
+  html_document:
+     theme: flatly
+     highlight: tango
+     toc: true
+     toc_float: true
+     toc_depth: 2
+     number_sections: false
+     code_folding: show
+bibliography: "input/bib/Mi_biblioteca.bib"
+cls: "input/bib/apa6.cls""
+linkcolor: blue
+link-citations: yes
+---
+
+# Resumen
+<div style="text-align: justify">
+A partir del diagnóstico de desafección y bajos índices de participación política a nivel mundial y, específicamente, para el caso de Chile, los estudios sobre los factores que influyen en estos fenómenos son sociológica y políticamente relevantes. En base a ello, se han desarrollado una serie de estudios vinculados con el conocimiento, las creencias, las actitudes, disposiciones y prácticas relacionadas a la ciudadanía y el sistema democrático.  Una parte de estos se dedican al análisis del conocimiento cívico, su influencia en la formación de ciudadanía activa y su vinculación con los otros elementos que se relacionan con ella. Estos dan cuenta de la relevancia del conocimiento cívico para el ejercicio de la ciudadanía activa o "ser buen ciudadano" y, por lo tanto, las bases de la democracia, en un contexto de auge de autoritarismos en Latinoamérica. Además, identifican, para el caso de Chile, la desigualdades socioeconómica y de género asociadas a este.
+La presente investigación analiza los elementos de nivel escuela que influyen sobre el conocimiento cívico, a partir de la influencia dada de factores individuales como el nivel socioeconómico y el género. Se enfoca en estudiar los efectos de las variables correspondientes al contexto escolar en el conocimiento cívico y su posible efecto de moderación hacia la relación entre este y el nivel socioeconómico o el género de los estudiantes de octavo básico que conforman la muestra. Es por lo anterior que la pregunta que guía la investigación es ¿Qué características del colegio son capaces de reducir la diferencia en el conocimiento cívico entre estudiantes de distintos origen socioeconómico y género?
+Se pretendió confirmar si un buen clima escolar en el colegio, junto a una percepción positiva de los estudiantes en cuanto al desarrollo de discusiones y un alto interés participativo de los estudiantes, influyen de manera positiva en el conocimiento cívico, moderando de esta manera el efecto del nivel socioeconómico y el género. Para lograr dar respuesta a la problemática planteada se utilizó como base de datos el estudio Internacional sobre Educación Cívica y Ciudadana [@ICCS] de la IEA, está incorpora 5081 estudiantes de octavo básico de 178 escuelas chilenas. Para fines de esta investigación solo se utilizarán siete variables. 
+Al llevar a cabo un análisis multinivel es posible notar cómo la cultura participativa, la apertura a la discusiones y la composición socioeconómica sí tienen efectos significativos en cuanto al conocimiento cívico de los estudiantes. En relación con el clima escolar y los espacios de participación no es posible notar algún tipo de efecto significativo. No identificó que alguna de las variables de nivel 2 tuviesen efecto de moderación para la relación entre variables de nivel 1 y conocimiento cívico. Para próximas investigación relacionadas a la problemáticas en cuestión, resultaría interesante llevar a cabo una agrupación de las variables de manera diferente para la medición de nivel socioeconómico agregado, como también, el desarrollo del datos longitudinales para un análisis más robusto. 
+
+## Palabras clave: 
+Conocimiento cívico, desigualdad socioeconómica, desigualdad de género, escuela
+
+# Introducción: 
+Actualmente, se hace cada vez más preocupante la baja participación en las elecciones, que pone en riesgo la validez del sistema democrático [@JanmaatCivicCompetences2013; @Sandoval-HernandezTeachingToleranceGlobalized2018]. Más aún, esta participación es eminentemente un tema de clase, existiendo una estrecha relación entre el nivel socioeconómico y la participación política. La tesis doctoral de @FuenzalidaDesigualdadciudadaniaaproximacion2018a, señala que uno de los mecanismos por los cuales se reproduce la desigualdad en la participación política es por la reproducción intergeneracional del conocimiento cívico, entendido como un conjunto de conocimientos, valores y habilidades necesarios para comprender y apreciar la organización democrática. Considerando este problema, la reproducción de la desigualdad política, y a la escuela como espacio de socialización política, este artículo se propone investigar las características del colegio que pueden ayudar a reducir las diferencias de conocimiento cívico entre estudiantes de distinto origen socioeconómico.
+
+## Conocimiento cívico, ciudadanía y democracia
+Según la  @ICCS, un elemento central dentro de lo que definen como "buen ciudadano" es el conocimiento cívico, en tanto resulta necesario para "comprender y valorar la vida en sociedad y las formas de organización democrática" [@ICCS]. A este se sumarían la capacidad de razonar acerca de procesos sociales, la habilidad de desarrollar opiniones fundamentadas, las actitudes favorables a la democracia y una disposición a participar activamente. Además, el conocimiento cívico se relaciona con el respeto a los derechos humanos de grupos tradicionalmente discriminados [@CaroTenHypothesesTolerance2012], con estar en desacuerdo con la corrupción y con la valoración positiva de la democracia como sistema representativo, que es fundamental en un período de resurgimiento de los gobiernos autoritarios.
+
+Dada su relevancia para los procesos democráticos, la participación, el respeto a los derechos humanos y la propia constitución de los sujetos en tanto ciudadanos, resulta crucial profundizar, así como en los otros factores relevantes para estos procesos, en torno al conocimiento cívico, su desarrollo y comportamiento como variable en la sociedad chilena. A partir de investigaciones previas al respecto, la presente investigación se propone analizar las desigualdades de conocimiento cívico que se manifiestan en Chile, ya que la distribución desigual del conocimiento cívico puede tener consecuencias graves y problemáticas en torno a los procesos señalados anteriormente.
+
+## Conocimiento cívico y desigualdades
+Por un lado, según investigaciones actuales, es posible hacer referencia a desigualdades socioeconómicas en torno al conocimiento cívico, dado que demuestran que el conocimiento cívico está especialmente influenciado por variables de origen socioeconómico [@ICCS;@SchulzICCS2009International2009;@DiazgranadosCivicCompetenceGaps2017;@TrevinoInfluenceteachersschools2017] Este fenómeno no es específico del Chile actual, se ha presentado en otros países y épocas, como se reconoce en el análisis de Bourdieu con respecto a las no-respuestas a preguntas "políticas" y su distribución en relación al capital cultural, lo que refleja la desigual distribución de disposiciones hacia la política, vinculándose estas al mayor capital cultural y, por lo tanto, a las clases altas. [@KrigerClasessocialescapital2012]. Pese a ello, los análisis específicos del conocimiento cívico para el caso chileno son fundamentales en tanto, considerando que Chile es un país profundamente desigual [@PaletDesigualesorigenescambios2017], dan cuenta de la particularidad nacional de este fenómeno y los factores relevantes para el país, permitiendo esclarecer líneas de acción al respecto. 
+
+Por otro lado, también es posible identificar las diferencias en torno al conocimiento cívico y el género, debido a que el Estudio Internacional de Educación Cívica y Ciudadana de la IEA indica que, a partir de los puntajes promedio en conocimiento cívico por género en cada país, las mujeres tuvieron resultados más altos que de los niños, tanto a nivel mundial como en promedio de conocimiento cívico por género en cada país. Por lo tanto, esperamos que las mujeres cuenten con mayor conocimiento cívico que los hombres.
+ 
+## Escuela como espacio relevante para el desarrollo del conocimiento cívico
+Ahora bien, entre los contextos y agentes de socialización a través de los que se puede aprender y experimentar sobre ciudadanía y conocimiento cívico, las escuelas desempeñan un rol importante. Aunque cabe destacar que los jóvenes no sólo se influencian por esta, sino que también hay otras experiencias, fuera de la escuela, relevantes para los procesos de aprendizaje y desarrollo en este ámbito [@CoxAprendizajeciudadaniacontextos2015]. Como fuentes de socialización política, se identifican como principales agentes la familia, la escuela, los grupos de pares y los medios de comunicación [@Vargas-SalfateSocializacioninterespolitica2015]. 
+ 
+Uno de los principios fundamentales para el análisis del conocimiento cívico, es el principio de primacía, el cual indica que las actitudes y comportamientos políticos son aprehendido desde la niñez, si bien, existe la posibilidad de que durante el desarrollo de la persona estos comportamientos se modifiquen por distintas causas, estas serían más bien menores, no 100% determinantes. [@Vargas-SalfateSocializacioninterespolitica2015]. De este modo, aunque no sean los únicos espacios relevantes, se puede reconocer una injerencia fundamental de las escuelas, en tanto instituciones vinculadas a la niñez y la juventud, para los procesos de conocimiento cívico. Se puede decir que estas se estructuran como un marco socializador en materia política [@Ponce-LaraPoliticalsocializationclassroom2013], dada la influencia de los círculos más cercanos de los y las jóvenes en su interés por la política. Esto implica que sea un espacio fundamental para la formación de jóvenes "buenos ciudadanos", es decir, con habilidades, conocimientos, actitudes y disposiciones relacionados con el ejercicio de la ciudadanía en un contexto democrático 
+
+En relación con las desigualdades en torno al conocimiento cívico, señaladas anteriormente, se puede identificar cómo se presentan entre escuelas. @Ponce-LaraPoliticalsocializationclassroom2013 distingue entre liceos de centro y periferia, definidos los primeros en función de su alta calidad educativa, en contraste con los segundos. Los estudiantes y las estudiantes del primer tipo de liceo tienen un comportamiento marcado por un alto interés en la política, situación contraria entre quienes asisten a los liceos de periferia. En ese sentido, los establecimientos educacionales ejercen un influjo relevante, en materia de concepciones, normas y valores, los que remiten a un tipo determinado de cultura política, marcado por el involucramiento en materia pública -en el caso de los liceos de centro-, en contraposición con los rasgos apáticos de los liceos de periferia. [@Vargas-SalfateSocializacioninterespolitica2015]
+
+Hay que destacar que la escuela transmite tanto conocimientos políticos como habilidades necesarias para la vida ciudadana, de manera explícita como implícitamente. Al igual que da la posibilidad de experimentar relaciones de poder dentro de esta. También se debe destacar que diferentes estudios experimentales, han demostrado que cambios en el currículum de los establecimientos, que se orienten a formas estudiantes con valores democráticos, inciden en las actitudes hacia la participación política de los niños y niñas, destacando así la importancia de la educación en la socialización política. También, en algunos casos, los establecimientos ofrecen la posibilidad de ejercer formas de participación política, ya sea a nivel del propio establecimiento como también desde este hacia el exterior, como sucede con las organizaciones estudiantiles. En ese sentido, un clima escolar de carácter mayormente democrático incide en un mayor involucramiento político y en menores tasas de desafección o desinterés [@PalonskyPoliticalsocializationelementary1987].
+ 
+En cuanto al contexto de aprendizaje, según @CoxAprendizajeciudadaniacontextos2015 , los elementos que generan una educación ciudadana más exitosa en colegios corresponden a: las relaciones positivas entre la escuela y la comunidad, permitiéndose que el colegio promueva oportunidades para que los alumnos se involucren con individuos y organizaciones externas a la escuela; el personal dedicado y entusiasta; el involucramiento y participación de los alumnos en las decisiones sobre su aprendizaje y el desarrollo de una voz estudiantil; y las formas activas de aprendizaje que incluyen la discusión, el debate, el diálogo y la reflexión.
+Entonces, a partir de la discusión teórica y empírica presentada anteriormente, se reconoce la influencia de diversas variables de carácter individual y contextual en el conocimiento cívico. Con  ello, surge el interés por analizar la relación entre conocimiento cívico variables de nivel estudiante y escuela, reconociendo sus diferentes efectos en este y las posibles interacciones entre ellas. La presente propuesta de investigación busca responder la siguiente pregunta ¿Qué características del colegio son capaces de reducir la diferencia en el conocimiento cívico entre estudiantes de distinto origen socioeconómico y género?
+
+# Preguntas, objetivos e hipótesis  
+Esta investigación ha sido orientada por tres preguntas de investigación:  
+
+* ¿La cultura participativa, el clima escolar y la apertura a la discusión en la escuela poseen un efecto en el conocimiento cívico?  
+* ¿El efecto del nivel socioeconómico del estudiante sobre su conocimiento cívico varía entre las escuelas?  
+* ¿La composición socioeconómica a nivel escuela permite moderar la desigualdad socioeconómica individual en el conocimiento cívico?  
+
+*Objetivo General:* Analizar si la composición socioeconómica, cultura participativa, el clima escolar y la apertura a la discusión en la escuela son capaces de moderar el efecto del género y el nivel socioeconómico de cada estudiante en el conocimiento cívico.  
+
+*Hipótesis (multinivel):* Se espera que una composición de alto nivel socioeconómico promedio, un buen clima escolar, una percepción positiva de los estudiantes sobre la apertura en las discusiones en el aula y una alta cultura participativa de los estudiantes posean un efecto positivo en el conocimiento cívico, capaz de moderar el efecto individual del nivel socioeconómico y género sobre este.  
+
+*Hipótesis de nivel 1:*
+
+* _Hipótesis 1:_ Pertenecer al género femenino posee un efecto positivo significativo sobre el conocimiento cívico.  
+
+* _Hipótesis 2:_ Mientras más alto sea el nivel socioeconómico de la familia a la que pertenece el estudiante, mayor será el conocimiento cívico de este.  
+
+*Hipótesis de nivel 2:*
+* _Hipótesis 3:_ Pertenecer a una escuela donde, en promedio, las familias de los estudiantes pertenecen a un nivel socioeconómico alto posee un efecto positivo significativo sobre el conocimiento cívico del estudiante.
+* _Hipótesis 4:_ Pertenecer a una escuela donde, en promedio, la mayoría de los estudiantes consideran relevante la participación posee un efecto positivo significativo sobre el conocimiento cívico del estudiante. 
+* _Hipótesis 5:_ Pertenecer a una escuela donde, en promedio, la mayoría de los estudiantes percibe que existe una apertura a la discusión en el aula, posee un efecto positivo y significativo sobre el conocimiento cívico del estudiante.
+* _Hipótesis 6:_ Pertenecer a una escuela con un buen clima en el aula posee un efectivo positivo y significativo sobre el conocimiento cívico del estudiante. 
+* _Hipótesis 7:_ Pertenecer a una escuela con más espacios de participación posee un efecto positivo y significativo sobre el conocimiento cívico del estudiante. 
+* _Hipótesis 8:_ Estas características de la escuela, permiten moderar el efecto de las características individuales sobre el conocimiento cívico.
+
+# Variables relevantes   
+## _Nivel 1_ 
+
+  a. __Variable dependiente__  
+
+      * __PV1CIV: Civic knowledge - 1st PV__ (9997 = Invalid, 9998 = Not administered, 9999 = Omitted)  
+
+  b. __Variables de control__  
+
+      * __S_GENDER: Student gender__ (0 = Boy, 1 = Girl, 7 = Invalid, 8 = Not administered, 9 = Omitted)  
+
+      * __S_NISB: National index of socioeconomic background__ Construida a partir de: 
+
+          1. Highest parental educational level (0 = Did not complete <ISCED level 2>, 1 = <ISCED level 2>, 2 = <ISCED level 3>, 3 = <ISCED level 4 or 5>, 4 = <ISCED level 6, 7 or 8>, 7 = Invalid, 8 = Not administered, 9 = Omitted)
+
+          2. Highest parental occupational status (97 = Invalid, 98 = Not administered, 99 = Omitted)
+
+          3. IS3G11: Your Home and your Family/About how many books are there in your home (1 = None or very few (0-10 books), 2 = Enought to fill one shelf (11-25 books), 3 = Enought to fill one bookcase (26-100 books), 4 = Enought to fill two bookcase (101-200 books), 5 = Enought to fill three or more bookcase (more than 200 books), 7 = Invalid, 8 = Not administered, 9 = Omitted)  
+
+## _Nivel 2: Variables independientes_
+
+  a. __S_VALPARTS: Cultura participativa de los estudiantes [AGREGADA]: How much do you agree or disagree with the following statements about student participation at school?__ (1 = Strongly agree, 2 = Agree, 3 = Disagree, 4 = Strongly disagree, 7 = Invalid, 8 = Not administered, 9 = Omitted)  
+
+      * IS3G21A: Student participation in how schools are run can make schools better.  
+
+      * IS3G21B: Lots of positive changes can happen in schools when students work together.  
+
+      * IS3G21C: Organizing groups of students to express their opinions could help solve problems in schools.  
+
+      * IS3G21D: Students can have more influence on what happens in schools if they act together rather than alone.  
+
+      * IS3G21E: Voting in student elections can make a difference to what happens at schools.  
+
+  b. __S_OPDISC: PercepciÃ³n de los estudiantes de apertura en las discusiones en el aula [AGREGADA]: When discussing political or social issues during regular lessons, how often do the following things happen?__  
+
+      * IS3G17A: Teachers encourage students to make up their own minds.   
+
+      * IS3G17B: Teachers encourage students to express their opinions.  
+
+      * IS3G17C: Students bring up current political events for discussion in class.  
+
+      * IS3G17D: Students express opinions in class even when their opinions are different from most of the
+other students.  
+
+      * IS3G17E: Teachers encourage students to discuss the issues with people having different opinions.  
+
+      * IS3G17F: Teachers present several sides of the issues when explaining them in class.  
+
+  c. __Clima escolar__ Se evaluarÃ¡ el efecto diferenciado de sus tres componentes:
+
+      * S_STUTREL: Students' perception of student-teacher relations at school.
+
+          1. IS3G19A: Most of my teachers treat me fairly.
+
+          2. IS3G19B: Students get along well with most teachers.
+
+          3. IS3G19C: Most teachers are interested in studentsâ well-being.
+
+          4. IS3G19D: Most of my teachers listen to what I have to say.
+
+          5. IS3G19E: If I need extra help, I receive it from my teachers.
+
+      * S_INTACT: Students' perceptions of student interaction at school.
+
+          1. IS3G19G: Most students at my school treat each other with respect.
+
+          2. IS3G19H: Most students at my school get along well with each other.
+
+          3. IS3G19I: My school is a place where students feel safe.
+
+      * S_ABUSE: Students' experiences of physical and verbal abuse at school.
+
+          1. IS3G20A A student called you by an offensive nickname.
+
+          2. IS3G20B A student said things about you to make others laugh.
+
+          3. IS3G20C A student threatened to hurt you.
+
+          4. IS3G20D You were physically attacked by another student.
+
+          5. IS3G20E A student broke something belonging to you on purpose.
+
+          6. IS3G20F A student posted offensive pictures or text about you on the Internet
+
+  d. __C_ENGAGE: Espacios de participaciÃ³n en la escuela para estudiantes: To what extent do the following statements apply to the current situation at this school?__ (1 = To a large extent, 2 = To a moderate extent, 3 = To a small extent, 4 = Not at all)  
+
+      * IC3G08A: Teachers are involved in decision-making processes.  
+
+      * IC3G08B: Parents are involved in decision-making processes.  
+
+      * IC3G08C: Students' opinions are taken into account in decisionmaking
+processes.  
+
+      * IC3G08D: Rules and regulations are followed by teaching and non-teaching staff, students, and parents.  
+
+      * IC3G08E: Students are given the opportunity to actively participate in school decisions.  
+
+      * IC3G08F: Parents are provided with information on the school and student performance.   
+
+## _Cluster variable_  
+
+      * Idschool: School id.   
+
+#Datos, variables y métodos
+
+## Datos  
+Se utilizaron los datos correspondientes a Chile del último estudio Internacional sobre Educación Cívica y Ciudadana [@ICCS] de la IEA, aplicado el año 2016 en 28 países. En la muestra chilena se incorporan 5081 estudiantes de octavo básico, de 178 escuelas del país. Algunas de las variables independientes que se utilizaron tenían casos perdidos, estos fueron eliminados con el código "na.omit". Por un lado, a nivel individual o de estudiante, se perdieron 235 casos, los cuales equivalen al 4,6% de los casos. Por otro lado, a nivel de escuela se perdieron 7 casos, los cuales equivalen al 3,9% de los casos originales. En ambos casos la cantidad de casos perdidos representa un bajo porcentaje del total de la muestra.
+
+##Variables
+Para responder a las preguntas de esta investigación se han considerado relevantes siete variables de esta base de datos. La variable dependiente de este estudio es "Conocimiento Cívico" (PV1CIV), la cual es resultado de un procedimiento basado en la teoría de respuesta al ítem para estimar los valores plausibles de conocimiento cívico de cada estudiante a partir de sus respuestas a 87 preguntas. Los puntajes fluctúan entre el 0 y el 800, en una escala que va desde el nulo conocimiento cívico (0) a mucho conocimiento cívico (800). 
+
+Las variables independientes a nivel individual son género y nivel socioeconómico. El género del estudiante (S_Gender) distingue entre hombre (0) y mujer (1). El nivel socioeconómico de la familia a la que pertenece el estudiante está construido a partir de tres variables; el nivel educacional más alto alcanzado por los padres que va desde educación básica incompleta a educación superior completa, de esta variable se eliminan las respuestas inválidas, no administradas y omitidas, el estatus ocupacional de los padres donde se eliminaran las respuestas inválida, no administradas y omitidas y la cantidad de libros existentes en el hogar del estudiante que se compone de  "ningún libro o muy pocos (0-10)", "Suficientes para rellenar un estante (11-25)", "Suficiente para rellenar un librero (26-100)", "Suficiente para llenar dos libreros (101-200)", "suficiente para llenar tres o más libreros (más de 200 libros)", de la cual se eliminarán los casos inválidos, no administrados y omitidos.  
+
+Las variables independientes de nivel 2 son: composición socioeconómica de la escuela, cultura participativa, clima escolar y percepción de discusiones en el aula. En primer lugar, la composición socioeconómica de la escuela corresponde a la variable nivel socioeconómico del estudiante a nivel agregado, adoptando los valores de las medias de nivel socioeconómico por escuela. En segundo lugar, la cultura participativa de los estudiantes (IS3G17A-IS3G17F) (agregada) se mide a partir de el acuerdo o desacuerdo  con las declaraciones sobre la participación de los estudiantes de la escuela que va desde 1 "totalmente de acuerdo" a 7 "totalmente en desacuerdo" las frases son las siguientes; a) La participación de los estudiantes en el funcionamiento de las escuelas puede mejorarlas. b) Pueden ocurrir muchos cambios positivos en las escuelas cuando los estudiantes trabajan juntos. c) Organizar grupos de estudiantes para expresar sus opiniones podría ayudar a resolver problemas en las escuelas. d) Los estudiantes pueden tener más influencia sobre lo que sucede en las escuelas si actúan juntos y no solos. e) Votar en las elecciones estudiantiles puede marcar una diferencia en lo que sucede en las escuelas. En tercer lugar, la variable clima escolar posee tres componentes; a) La percepción del estudiante acerca de la relación entre profesores y estudiantes, b) la percepción del estudiante acerca de las relaciones entre estudiantes, y c) la percepción del estudiante sobre abuso verbal y físico en la escuela. En cuarto y último lugar, la variable dependiente espacios de participación en la escuela para estudiantes (IS3G17A-IS3G17F) está medida a partir de la respuesta de los estudiantes a la pregunta ¿En qué medida se aplican las siguientes declaraciones a la situación actual en tú escuela? ante la que se le presentan las siguientes situaciones: "Los docentes participan en los procesos de decisiones", "Los padres participan en los procesos de toma de decisiones", "Las opiniones de los estudiantes se tienen en cuenta en los procesos de toma de decisiones", "El personal docente y no docente, los estudiantes y los padres siguen las reglas y regulaciones", "Los estudiantes tienen la oportunidad de participar activamente en las decisiones escolares", "Los padres reciben información sobre el rendimiento escolar y del alumno". En cuarto y último lugar, la percepción de los estudiantes en las discusiones en el aula (agregada) esta se mide, a partir de cuan seguido tienen los estudiantes determinados actos sobre discusión política o hechos sociales durante clases estos son los siguientes; "Los maestros alientan a los estudiantes a tomar sus propias decisiones.", "los maestros alientan a los estudiantes a expresar sus opiniones.", "Los estudiantes presentan eventos políticos actuales para su discusión en clase." "Los estudiantes expresan opiniones en clase incluso cuando sus opiniones son diferentes de la mayoría de los otros estudiantes." "Los maestros alientan a los estudiantes a discutir los problemas con personas que tienen opiniones diferentes." "Los maestros presentan varios lados de los problemas cuando los explican en clase."
+
+## Método
+
+Para esta investigación se utilizará la técnica de análisis multinivel, que toma en cuenta la estructura anidada o jerárquica de los datos, puesto que se desea conocer cómo una variable contextual afecta en una variable de nivel individual, en este caso, como el contexto del colegio al que asisten estudiantes de octavo básico afecta en su conocimiento cívico, además de las interacciones entre niveles para el efecto de las variables de nivel 1 sobre la dependiente. Asimismo, la técnica de análisis multinivel permite conocer cómo afectan variables de nivel 1 como lo es el nivel socioeconómico de los estudiantes en su conocimiento cívico. 
+
+El desarrollo de modelos multinivel para el análisis del conocimiento cívico se basa en la siguiente fórmula:
+
+ $$y_{ij} = \gamma_{00} + \gamma_{10}X_{ij} + \gamma_{01}Z_{j} + \mu_{0j} + r_{ij}$$  
+
+Donde $\gamma_{ij}$ es el valor de la variable dependiente, en este caso el puntaje en conocimiento cívico; $\gamma_{00}$ es el gran intercepto o promedio general estimado a partir de los resultados de todos los estudiantes;$\gamma_{01}Z_{j}$ es el valor de la pendiente asociado a un efecto fijo de variable contextual; $\mu_{0j}$ es el efecto aleatorio para el intercepto según anidación, en este caso, según escuelas (id); $r_{ij}$ y los residuos a nivel individual.
+
+# Resultados
+
+## Análisis descriptivos
+
+### Análisis descriptivo de variable dependiente:
+
+Los datos descriptivos de la variable conocimiento cívico, nos indican que en promedio los estudiantes poseen 488.7 puntos en conocimiento cívico, lo cual corresponde a un conocimiento cívico medio. La mitad de los estudiantes tiene un conocimiento cívico menor a 492 puntos, es decir, un conocimiento cívico medio a bajo. El estudiante que tiene mayor conocimiento cívico obtuvo 782 puntos. Sin embargo, el 75% de los estudiantes tienen un conocimiento cívico menor a 600 puntos. 
+
+### Análisis descriptivo variables independientes de nivel 1:
+
+Los datos descriptivos del nivel socioeconómico de los estudiantes, indica que en promedio los estudiantes de octavo básico pertenecen al nivel socioeconómico medio, debido a que, el promedio es 0.1 en una escala del -3 al 3. Además, solo un 25% de los jóvenes estudiados pertenece a un nivel socioeconómico alto.   
+
+### Análisis descriptivo variables independientes Nivel 2:
+
+A partir de los datos descriptivos de la variable "cultura participativa" destacamos que en promedio los jóvenes de octavo básico tienen una cultura participativa media en 53.75 puntos en una escala del 1 al 100, sin embargo, el máximo puntaje obtenido es 68.37 puntos, lo que es bajo considerando que una alta cultura participativa son 100 puntos. Además casi la mitad de la población tiene una cultura participativa media/baja. 
+
+## Análisis bivariado 
+
+Como puede verse existen relaciones de mediana intensidad entre las variables a nivel escuela. Destaca la relación que existe entre el nivel socioeconómico promedio de los padres y el conocimiento cívico del estudiante. Además, aquellos colegios que poseen una apertura a la discusión, poseen también, en promedio, buenas actitudes hacia la participación, al mismo tiempo que ambas variables se relacionan de manera moderada con el conocimiento cívico del estudiante. La única variable que parece no dar cuenta de un espacio propicio para el conocimiento cívico es aquella que refiere a los espacios de participación en el colegio, lo cual puede deberse a la mala calidad de estos espacios de participación. También parece existir una relación entre el nse promedio y la apertura que existe a la discusión. Por último, como bien destaca la literatura, existe una alta segregación escolar que se evidencia en la relación entre el nse del estudiante y el nse promedio del colegio. En suma, tomando en cuenta que la relación más fuerte con el conocimiento cívico es la del promedio del nse de la escuela, podemos decir que es probable que nuestra hipótesis respecto al control del nse propio por el de la escuela puede tener futuro.
+
+## Análisis multinivel
+### Modelo nulo  
+
+En primer lugar, en el modelo nulo se presenta el conocimiento cívico de nivel estudiante y el efecto aleatorio del intercepto de esta variable, según escuela. Es decir, no se incorporan otras variables de nivel estudiante o escuela al modelo, más que el conocimiento cívico e id de las escuelas. El modelo fue ajustado a partir de una muestra de 4846 estudiantes anidados en 171 escuelas. 
+Se presenta en los resultados, la estimación de un puntaje promedio de 487.153 para la población, a través de todas las escuelas, como gran intercepto, asociado a un error estándar de 4.56. El resultado presenta las varianzas y desviaciones estándar del intercepto aleatorio, reconociéndose una varianza de 3295 y una desviación estándar de 57.41. Lo cual significa que, en promedio, el puntaje de conocimiento cívico de las escuelas se aleja en 57.41 puntos del promedio general entre estudiantes o gran intercepto. En los residuos se reconoce la desviación estándar en el nivel 1, es decir, a nivel de estudiante. Por lo tanto, en promedio, los estudiantes se alejan en 77.15 puntos del promedio de puntaje en conocimiento cívico de la muestra
+
+### La magnitud de los efectos de la escuela en el conocimiento cívico
+Para estimar el efecto del contexto escolar sobre el conocimiento cívico, en primer lugar, debemos identificar, a través de una estimación, qué parte de la varianza de este se debe a diferencias individuales entre estudiantes y qué parte se debe al contexto escolar. Posteriormente, entonces, se presentarán modelos que incluyen predictores únicamente individuales y contextuales junto con individuales. 
+
+El estimador que da cuenta de la proporción entre factores de nivel individual y contextual que tienen efecto sobre la varianza de la variable dependiente es la correlación intraclase. Esta se obtiene a partir de una proporción entre la varianza asociada a la escuela (3295) y la de esta sumada a la varianza a nivel estudiantes (3295+5951). Por lo tanto, posee un valor de 0.356, lo cual implica que un 35.6% de la varianza del puntaje en conocimiento cívico se asocia a la escuela, nuestra variable de contexto o nivel 2. El resto de la proporción de la varianza estaría asociada a factores de nivel individual, es decir, entre estudiantes dentro de la escuela. A partir de aquello se puede decir que una alta proporción de la varianza del puntaje en conocimiento cívico se asocia a las escuelas, es decir, que hay una gran varianza entre escuelas. Ahora bien ¿Cuáles son las características de la escuela que explican este porcentaje de la varianza del puntaje de conocimiento cívico asociado a las escuelas?
+
+### Comparación de modelos
+Se desarrollaron seis modelos que incorporan progresivamente las variables relevantes para el análisis. El modelo 1 incorpora solo variables individuales (género, origen socioeconómico). El modelo 2 integra variables sobre las cuales el colegio tiene poca injerencia, las cuales denominaremos variables estructurales (i.e. género del estudiante, origen socioeconómico del estudiante, promedio del origen socioeconómico). Los modelos siguientes integran variables sobre el ambiente escolar: el modelo 2 incorpora variables relacionadas con un _ambiente democrático_ (i.e. actitudes a la participación, apertura a la discusión y espacios participativos). El modelo 3 referidas al _clima escolar_ (i.e. relación con los profesores y entre los estudiantes), el modelo 4 incorpora las variables de ambiente democrático y de clima escolar. El modelo 5, por último, incorpora todas las variables (Tabla 2).
+
+El modelo 1, nos presenta una relación positiva entre ser mujer o ser de origen socioeconómico algo y el conocimiento cívico. Esta relación entre origen y conocimiento cívico es en parte controlada en el modelo siguiente, dando cuenta de que parte de dicho efecto corresponde a la participación en establecimientos con estudiantes de familias con alto NSE.
+
+En el modelo 2 presenta las variables estructurales, es decir la de género, nivel socioeconómico a nivel individual y el promedio del NSE a nivel escuela. Con un intercepto de 475.43, la variable género tiene un beta de regresión de 19.70, es decir, ser mujer implica un aumento de 19.70 puntos, en promedio, del puntaje en conocimiento cívico. El nivel socioeconómico individual posee un beta de 16.07, lo que implica que el aumento de un punto en el índice de nivel socioeconómico supone el aumento de 16.07 puntos en el puntaje en conocimiento cívico. Por su parte, por cada unidad que aumenta el promedio del NSE de la escuela, el estudiante aumenta en 44.53, lo cual nos indica que una mayor parte del efecto corresponde al efecto socioeconómico de la escuela. Tanto intercepto como género y nivel socioeconómico son significativas con un 99% de confianza. La varianza del intercepto, referida al efecto fijo sobre este, es de 973.74 y la varianza residual, es decir, aquella que representa la proporción no explicada del modelo, es de 5728.82.
+
+En los modelos siguientes, como se mencionó, se incorporan variables relativas al ambiente escolar. 
+
+En el modelo 3 los espacios participativos no tienen significación estadística, es decir, no tienen un efecto significativo a nivel poblacional, para el conocimiento cívico, no obstante, esta conclusión debe tomarse con cuidado, pues no se está midiendo la calidad de esos espacios participativos. Por otro lado, puede decirse con un 99% de confianza, que los espacios abiertos a la discusión si generan un efecto positivo sobre el conocimiento cívico, mientras que puede afirmarse con un 99,9% de confianza que estar en un establecimiento con estudiantes que consideran beneficiosa la participación democrática en el colegio, genera un efecto positivo sobre el conocimiento cívico. 
+
+En el modelo 4, se incorporan variables relativas al clima escolar. Puede verse una consistencia entre el efecto negativo de un mal clima en el aula, y el efecto positivo de un buen clima, siendo ambos efectos significativos con una probabilidad de error por la aleatoriedad de la muestra menor al 1%. El modelo también da cuenta de una relación negativa entre una buena relación con el profesor y el conocimiento cívico
+
+El modelo 5, incorpora las variables de clima escolar y de ambiente democrático simultáneamente. Se concluye a partir de este modelo que los efectos de dichas variables son independientes entre sí, manteniendo su significancia pese al control estadístico mutuo. 
+
+En este último modelo (6), que incorpora tanto variables de nivel 1 como de nivel 2, se observan otros cambios en las variables analizadas. En primer lugar, la beta de regresión de la variable género pasa a ser 18.57, disminuyendo 1.13, pero mantiene su significación estadística.
+En segundo lugar, la cultura participativa y apertura a la discusión mantienen su significación estadística, al 99 y 95% de confianza, pero sus betas quedan en 3.16 y 1.99, disminuyendo 1.45 y 1.16, respectivamente, este es un dato interesante puesto que refleja un efecto positivo del ambiente del colegio relativamente independiente de las características estructurales del mismo. Finalmente, la composición socioeconómica o nivel socioeconómico agregado disminuye de 44.533 a 35.44, pero mantiene su significancia a un nivel de confianza de 99%, siendo esta disminución muestra de que parte del efecto de los colegios con mayor NSE, está relacionado con el ambiente del mismo colegio. 
+
+Esto implica que, controlando por todas las demás variables, ser mujer implica, en promedio, 18.57 puntos más en el puntaje de conocimiento cívico y tener un punto más en el índice de nivel socioeconómico supone un aumento de 16.06 puntos en este. Mientras que un punto más en el índice de cultura participativa conlleva 3.16 puntos más en conocimiento cívico; un punto más en apertura a la discusión supone 1.99 más en este; y un punto más en el índice promedio de nivel socioeconómico de la escuela supone 35.44 puntos más, en promedio, en el puntaje de conocimiento cívico. Todo ello con al menos un 95% de confianza.
+
+A partir del modelo completo, se identifica una disminución relativamente alta - de 2010.94 a 669.10 - en la varianza del intercepto. En contraste, la varianza de los residuos tiene una disminución relativamente pequeña - de 5734.51 a 5730.97 -. 
+
+Cabe destacar, que existe una mejora estadísticamente significativa a un 99% de confianza entre el modelo que solo incluye las variables estructurales y el modelo que agrega las variables relativas al ambiente del colegio (p_value de anova = 1.12e-08). En consideración de esto, podemos decir, que estas variables no son indiferentes al conocimiento cívico en comparación con el efecto de las desigualdades sociales. 
+
+De este modo, se reconoce que la cultura participativa, la apertura a la discusión y la composición socioeconómica sí tienen efectos significativos sobre el conocimiento cívico, mientras que el clima escolar y los espacios de participación, siguiendo la manera en que están medidos por la ICCS, no tienen un efecto significativo sobre este.
+
+Al incorporarse las variables de nivel 2, se reconoce la misma relación entre variables de nivel 1 y conocimiento cívico, de tal modo que todos los casos poseen la misma pendiente. A pesar de ello, estos modelos no se originan en un gran intercepto, sino que estos son diferenciados entre las escuelas, de modo que son aleatorios en relación a la varianza dada según las variables incorporadas. Es decir, a partir de las variables de nivel 2 se produce un cambio en el promedio de conocimiento cívico por escuela, pero la variación de este según variables de nivel 1 se presenta como igual entre escuelas. Por lo tanto, cabe preguntarse: ¿El efecto del nivel socioeconómico del estudiante sobre su conocimiento cívico varía entre las escuelas? 
+
+### Comparación de modelos 6-8
+En la tabla 3 se presentan dos modelos adicionales. Los modelos anteriores daban cuenta de la influencia de variables de nivel 2 sobre el intercepto de la variable dependiente. Por su parte, estos nuevos modelos profundizan en la influencia de estas variables incorporando aleatorización y moderación.
+
+El modelo 7 incorpora todas las variables señaladas, pero aleatoriza el efecto de la variable nivel socioeconómico. Así, se pretende reconocer de qué manera varía, entre escuelas, el efecto del nivel socioeconómico en el conocimiento cívico. Al incorporar el nivel socioeconómico del estudiante con pendiente aleatoria, los betas de regresión varían sutilmente o se mantienen y su significación estadística se mantiene. El efecto aleatorio se presenta en la varianza del nivel socioeconómico según escuela, la cual tiene un valor de 55.10. A partir del análisis de comparación de modelos utilizado anova, podemos decir solo con un 95% de confianza, que existe una mejora del modelo al incorporar la aleatorización (p-value=0.02162)
+
+Finalmente, cabe preguntarse ¿Alguna de las variables de nivel 2, vale decir, de la escuela, permite moderar la desigualdad socioeconómica en el conocimiento cívico? Se agrega un efecto de moderación entre variables en el modelo 8. De este modo, se presenta la pendiente aleatoria del efecto del nivel socioeconómico individual hacia el conocimiento cívico moderada por la composición socioeconómica de la escuela. Este efecto de moderación no es significativo, a lo que se agrega que no existe una diferencia significativa entre el modelo con pendiente aleatoria y el modelo con pendiente aleatoria e interacción entre niveles (p-value = 0.4887).
+
+Cabe señalar que este ejercicio se realizó con las variables de clima escolar y de cultura participativa, obteniéndose resultados similares. En consideración de esto podemos decir que ninguna de las variables revisadas en este artículo son capaces de explicar la variación de la pendiente aleatorizada entre origen socioeconómico y conocimiento cívico.
+
+### Plot
+```{r}
+
+```
+
+### Ajuste de los modelos: Ajuste por proporción de varianzas 
+
+Para identificar el ajuste del modelo completo, se calcula el R2 de Bryk & Raudenbusch para ambos niveles, el cual corresponde a una medida de ajuste por proporción de varianzas, vale decir, vinculada a la proporción de varianza asociada al modelo.  En el caso del modelo 1, que incorpora sólo variables de nivel 1, su R2br es de 0.389, mientras que para el modelo 5 es de 0.809. Se observa, entonces, que el modelo explica un 80.9% de la varianza del conocimiento cívico asociada a la escuela (35.6%). De este modo, se puede concluir, en consideración de una varianza intraclase de alrededor del 30% que el modelo con todas las variables explica en un alto porcentaje y en mayor medida que aquel modelo que incluye únicamente variables individuales, lo que nos permite dar cuenta del efecto de la escuela sobre el conocimiento cívico.
+
+# Discusión
+
+A partir de los resultados expuestos, podemos afirmar que, tal como lo señalan diversos autores, el nivel socioeconómico [@ICCS; @DiazgranadosCivicCompetenceGaps2017; @TrevinoInfluenceteachersschools2017] y el género explican diferencias en el conocimiento cívico entre estudiantes. Además, tal como lo señala la literatura, existe una influencia contextual de la escuela en este [@Ponce-Lara Political socialization classroom 2013]. Es decir, hay características de la escuela que influyen considerablemente en el conocimiento cívico de los y las estudiantes.
+
+A partir del análisis de los datos, se reconoce que, entre estas características, para el caso de Chile, están la composición socioeconómica de la escuela, la cultura participativa de los estudiantes y la existencia de espacios para generar discusión sobre temas relevantes y de contingencia nacional. Así, se puede afirmar que las escuelas de nivel socioeconómico más alto, en promedio, tienen mayores puntajes promedio de conocimiento cívico. Lo mismo ocurre con aquellas que tienen una cultura más participativa, vale decir,  en que sus estudiantes están de acuerdo con frases vinculadas a la cultura participativa, y con aquellas que generan más espacios de discusión, esto es, a mayor frecuencia de espacios de discusión política, mayor es el puntaje promedio de conocimiento cívico. 
+
+Estos resultados tienen gran relevancia para las decisiones políticas tanto de las escuelas como a nivel gubernamental o ministerial. De este modo, fomentar una cultura participativa y la discusión política generarían un impacto positivo sobre el conocimiento cívico. Además, las políticas que generen una despolarización de la media de ingresos entre escuelas, como el fortalecimiento de la educación pública y el fin a la selección, implicarían una disminución en la desigualdad de conocimiento cívico, en promedio, entre escuelas.
+
+Debido la existencia de espacios participativos y el clima escolar no tienen significancia estadística en el modelo, estos no serían características contextuales que permitieran explicar la diferencia en el conocimiento cívico. Es así como las escuelas si bien, influyen y estructuran un marco socializador a la hora de producir "buenos ciudadanos" con un mayor conocimiento cívico, no son el clima escolar o presencia de espacios participativos en la escuela los factores más influyentes a la hora de poseer un mayor conocimiento cívico. Son otras actividades específicas desarrolladas por parte de la escuela las relevantes para este fenómeno, como la apertura a espacios de discusión, tal como lo habían planteado @CoxAprendizajeciudadaniacontextos2015, donde más que el clima escolar, son la promoción de oportunidades y el involucramiento de los estudiantes los que permiten una educación ciudadana más exitosa. 
+
+A pesar de ello, no se debe desestimar la posible importancia de estas variables, en relación con su efecto sobre otras variables relacionadas con ciudadanía y democracia, desde el punto de vista de las actitudes, disposiciones y creencias.
+
+Ahora bien, tal como lo hacía la bibliografía presentada, el nivel socioeconómico de los alumnos es una de las variables que tienen mayor influencia en el conocimiento cívico del estudiante. Frente a la hipótesis de posibles moderaciones del contexto escolar sobre este efecto, cabe destacar que el nivel socioeconómico de la escuela no modera la variable individual de carácter socioeconómico del estudiante, ni lo hacen otras variables de carácter contextual. 
+
+Esto implicaría que existen limitaciones en las posibilidades de acción de las escuelas para reducir la desigualdad entre estudiantes dentro de la misma escuela. Es decir, a pesar de que se puede aumentar, en promedio, el puntaje de conocimiento cívico de la escuela a partir de medidas dentro de esta, las diferencias asociadas al nivel socioeconómico individual de los estudiantes seguirán presentes dentro de la escuela.
+
+Aun así, es preciso interpretar cuidadosamente este resultado, ya que puede ser debido a la manera de construir el índice para medir el nivel socioeconómico agregado de los colegios, que se hace de la misma manera que el nivel socioeconómico a nivel individual.
+
+Respecto al género de los estudiantes, se reforzó la teoría acerca de que las mujeres tienen mayor conocimiento cívico que los hombres. A pesar de que su influencia disminuye relativamente al incluir otras variables en el modelo, esta se mantiene en un nivel considerable y significativo. Además, al igual que para nivel socioeconómico, se revisó la posibilidad de que esta variable tuviera un efecto aleatorio, moderado por variables de nivel 2. El resultado, del mismo modo que para el caso de nivel socioeconómico, permite concluir que su efecto no es aleatorio ni moderado por las variables de nivel escuela que se presentan en el modelo. 
+
+
+# Conclusiones
+
+A modo de conclusión, se puede señalar que ninguna variable de nivel 2 es capaz de moderar el efecto del nivel socioeconómico y del género sobre el conocimiento cívico. Si bien, son significativos a la hora de establecer un mayor puntaje de este, no son capaces de moderar los efectos de variables individuales. Además, dentro de las variables de la escuela, la composición socioeconómica, la cultura participativa y la apertura a la discusión en las escuelas poseen un efecto significativo sobre el conocimiento cívico, no así el clima escolar y los espacios participativos. 
+
+Respecto a las hipótesis de nivel 1, estas se corroboraron en su totalidad, puesto que, controlando por las demás variables incorporadas en el modelo, pertenecer al género femenino posee un efecto positivo significativo sobre el conocimiento cívico aumentando en 18.57 puntos en relación a los estudiantes hombres. Lo mismo ocurre con el nivel socioeconómico del estudiante, debido a que por cada punto que aumente el nivel socioeconómico de la familia a la que pertenece el estudiante el aumento de su conocimiento cívico será de 16.03 puntos. 
+
+No es posible decir lo mismo en relación con las hipótesis de nivel 2, debido a que sólo ciertas variables de nivel escuela poseen efectos significativos sobre el conocimiento cívico de los estudiantes. Se puede afirmar que al pertenecer a una escuela donde, en promedio, las familias de las estudiantes pertenezcan a un nivel socioeconómico más alto posee un efecto positivo significativo sobre el conocimiento cívico del estudiante. Lo mismo ocurre con escuelas en que los estudiantes perciban mayor apertura a la discusión en el aula y que presenten una mayor cultura participativa.
+
+Pero no se puede afirmar que la mayor presencia de espacios participativos en la escuela posea un efecto positivo significativo sobre el conocimiento cívico del estudiante, lo mismo que sucede en relación con el clima escolar. 
+
+La realización de este estudio, a partir de la metodología multinivel es sumamente relevante puesto que al modelo 1, que solo incluye variables de nivel 1, se asocia un 38,9% la varianza de conocimiento cívico, dado su R2. Mientras que al modelo 5, donde se incorporaron variables de nivel 1 y de nivel 2, se asocia un 80.9% de la varianza del conocimiento cívico vinculada a la escuela. Es decir se aumenta significativamente la explicación del fenómeno a partir de añadir variables de tipo contextuales. 
+
+Las limitaciones de esta investigación están relacionadas a el modo de construir las variables de la base internacional utilizada [@ICCS] que en algunos casos, no se adecúan a la realidad chilena como se mencionó anteriormente. Además, el efecto de la escuela se identifica en términos absolutos, al analizarse datos de corte transversal, dejándose de lado el análisis sobre el efecto de las escuelas en términos de progreso del conocimiento cívico.
+Para futuras investigaciones, sería más conveniente que el nivel socioeconómico agregado de las escuelas se midiera a partir de el tipo de administración del colegio como "particular", "subvencionado", "municipal", debido a que esto es más influyente en Chile respecto a las características del colegio. 
+Además, sería de gran relevancia el desarrollo de datos longitudinales, lo cual se puede realizar a través de la prueba SIMCE, para dar cuenta de manera más completa y robusta sobre este fenómeno. De este modo, se podría reconocer la influencia de la escuela en el progreso del conocimiento cívico, más allá de los resultados en sí mismos, evitándose el sesgo vinculado con un desigual "punto de partida" que se presenta en los resultados, el cual puede conducir a error de tipo II, es decir, no reconocer el efecto de la escuela cuando sí existe.
+
+Finalmente, a partir de los resultados de este estudio sería relevante analizar el efecto del conocimiento cívico sobre otras variables individuales como las actitudes y disposiciones hacia la democracia, la participación efectiva o el respeto de los alumnos a los derechos humanos. Considerando, en relación a esta última, que en Chile es sumamente relevante dar cuenta de este fenómeno, debido a las violaciones a derechos humanos ocurridas durante la dictadura militar, sumadas a violaciones a estos en democracia, relacionadas con violencia de género, homofobia, racismo, xenofobia y la opresión hacia elpueblo mapuche.
+
+# Bibliografía
+
+</div>  

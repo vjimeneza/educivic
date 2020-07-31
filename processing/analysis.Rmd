@@ -1,0 +1,100 @@
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Cargar librerias
+```{r}
+pacman::p_load(lme4,
+               reghelper,
+               haven,
+               descr,
+               stargazer,
+               ggplot2, # graficos
+               dplyr, # manipulacion de datos
+               texreg, # tablas lme4
+               sjPlot,
+               corrplot
+)
+```
+
+# Data
+```{r}
+load(file="../input/data/proc/data.Rdata")
+```
+
+# Análisis descriptivo
+```{r results='asis'}
+summary(data)
+stargazer(data, title="Estadísticos descriptivos", type = "html")
+hist(data$PV1CIV)
+```
+
+# Análisis bivariado 
+```{r}
+basecor<-select(data,m_nse, nse, m_cult_part, m_apert_disc, m_esp_part,m_nse, PV1CIV)
+
+datacor<-cor(basecor)
+datacor <- corrplot.mixed(datacor)
+ggsave(datacor, file = "../output/graphs/graph_cor.png",device = "png",width = 35,height = 25,dpi = "retina",units = "cm")
+```
+
+# Análisis multinivel
+## Modelo nulo  
+```{r}
+results_0 = lmer(PV1CIV ~ 1 + (1| idschool), data = data, REML=F)
+summary(results_0)
+screenreg(results_0) 
+```
+
+## Correlación intraclase  
+```{r}
+reghelper::ICC(results_0)
+```
+
+## Estimación de modelos
+```{r}
+# Model 1: nivel 
+results_0 = lmer(PV1CIV ~ 1 + S_GENDER + nse + (1 |idschool), data = data, REML=F)
+
+results_1 = lmer(PV1CIV ~ 1 + S_GENDER + nse + m_nse + (1 |idschool), data = data, REML=F)
+# Model 2: variables nivel 2 referidas a la participaciÃ³n y discusiÃ³n  
+results_2 = lmer(PV1CIV ~ 1 + m_cult_part + m_apert_disc + m_esp_part + (1 | idschool), data = data, REML=F)
+# Model 3: variables nivel 2 referidas al clima escolar  
+results_3 = lmer(PV1CIV ~ 1 + clima_prof + clima_est + mal_clima + (1 | idschool), data = data, REML=F)
+
+# Model 5: todas las variables nivel 2  
+results_5 = lmer(PV1CIV ~ 1  + m_cult_part + m_apert_disc + clima_prof + clima_est + mal_clima + m_esp_part + (1 | idschool), data = data, REML=F)
+# Model 6: variables nivel 1 y nivel 2  
+results_6 = lmer(PV1CIV ~ 1 + S_GENDER + nse + m_nse + m_cult_part + m_apert_disc + clima_prof + clima_est + mal_clima + m_esp_part + (1 | idschool), data = data, REML=F)
+# Model 7: pendiente aleatoria  
+results_7 = lmer(PV1CIV ~ 1 + S_GENDER + nse + m_nse + m_cult_part + m_apert_disc + clima_prof + clima_est + mal_clima + m_esp_part + (1 + nse | idschool), data = data, REML=F)
+# Model 8: pendiente aleatoria e interacciÃ³n entre niveles  
+results_8 = lmer(PV1CIV ~ 1 + S_GENDER + nse*m_nse + m_apert_disc + m_cult_part + m_nse + clima_prof + clima_est + mal_clima + m_esp_part + (1 + nse | idschool), data = data, REML=F)
+```
+
+## Comparación de modelos 1-6
+```{r results='asis'}
+stargazer(list(results_0, results_1,results_2,results_3,results_5,results_6), type="html")
+```
+
+## Comparación de modelos 6-8
+```{r results='asis'}
+htmlreg(list(results_6,results_7,results_8))
+```
+
+## Plot
+```{r}
+plot_model(results_8, type = "int")
+```
+
+## Ajuste de los modelos   
+### Ajuste por proporción de varianzas   
+```{r, results='asis'}
+# R^2 Bryk & Raudenbusch (var idsc m0 - var idsc m1) / var idsc m0  
+## Nivel 1  
+r2_fit1a <- (3295.58 - 2010.94)/3295.58
+r2_fit1a #0.389
+## Nivel 2  
+r2_fit1b <- (3295.58 - 627.92)/3295.58
+r2_fit1b #0.809
+```

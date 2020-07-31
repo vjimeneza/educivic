@@ -1,2 +1,1 @@
-# educivic
-Trabajo de ciencia de datos
+# IPO Modelo de proyecto / project template
