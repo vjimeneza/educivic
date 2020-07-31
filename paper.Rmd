@@ -71,11 +71,17 @@ Esta investigación ha sido orientada por tres preguntas de investigación:
 * _Hipótesis 2:_ Mientras más alto sea el nivel socioeconómico de la familia a la que pertenece el estudiante, mayor será el conocimiento cívico de este.  
 
 *Hipótesis de nivel 2:*
+
 * _Hipótesis 3:_ Pertenecer a una escuela donde, en promedio, las familias de los estudiantes pertenecen a un nivel socioeconómico alto posee un efecto positivo significativo sobre el conocimiento cívico del estudiante.
+
 * _Hipótesis 4:_ Pertenecer a una escuela donde, en promedio, la mayoría de los estudiantes consideran relevante la participación posee un efecto positivo significativo sobre el conocimiento cívico del estudiante. 
+
 * _Hipótesis 5:_ Pertenecer a una escuela donde, en promedio, la mayoría de los estudiantes percibe que existe una apertura a la discusión en el aula, posee un efecto positivo y significativo sobre el conocimiento cívico del estudiante.
+
 * _Hipótesis 6:_ Pertenecer a una escuela con un buen clima en el aula posee un efectivo positivo y significativo sobre el conocimiento cívico del estudiante. 
+
 * _Hipótesis 7:_ Pertenecer a una escuela con más espacios de participación posee un efecto positivo y significativo sobre el conocimiento cívico del estudiante. 
+
 * _Hipótesis 8:_ Estas características de la escuela, permiten moderar el efecto de las características individuales sobre el conocimiento cívico.
 
 # Variables relevantes   
@@ -111,7 +117,7 @@ Esta investigación ha sido orientada por tres preguntas de investigación:
 
       * IS3G21E: Voting in student elections can make a difference to what happens at schools.  
 
-  b. __S_OPDISC: PercepciÃ³n de los estudiantes de apertura en las discusiones en el aula [AGREGADA]: When discussing political or social issues during regular lessons, how often do the following things happen?__  
+  b. __S_OPDISC: Percepción de los estudiantes de apertura en las discusiones en el aula [AGREGADA]: When discussing political or social issues during regular lessons, how often do the following things happen?__  
 
       * IS3G17A: Teachers encourage students to make up their own minds.   
 
@@ -126,7 +132,7 @@ other students.
 
       * IS3G17F: Teachers present several sides of the issues when explaining them in class.  
 
-  c. __Clima escolar__ Se evaluarÃ¡ el efecto diferenciado de sus tres componentes:
+  c. __Clima escolar__ Se evaluará el efecto diferenciado de sus tres componentes:
 
       * S_STUTREL: Students' perception of student-teacher relations at school.
 
@@ -162,7 +168,7 @@ other students.
 
           6. IS3G20F A student posted offensive pictures or text about you on the Internet
 
-  d. __C_ENGAGE: Espacios de participaciÃ³n en la escuela para estudiantes: To what extent do the following statements apply to the current situation at this school?__ (1 = To a large extent, 2 = To a moderate extent, 3 = To a small extent, 4 = Not at all)  
+  d. __C_ENGAGE: Espacios de participación en la escuela para estudiantes: To what extent do the following statements apply to the current situation at this school?__ (1 = To a large extent, 2 = To a moderate extent, 3 = To a small extent, 4 = Not at all)  
 
       * IC3G08A: Teachers are involved in decision-making processes.  
 
@@ -181,12 +187,12 @@ processes.
 
       * Idschool: School id.   
 
-#Datos, variables y métodos
+# Datos, variables y métodos
 
 ## Datos  
 Se utilizaron los datos correspondientes a Chile del último estudio Internacional sobre Educación Cívica y Ciudadana [@ICCS] de la IEA, aplicado el año 2016 en 28 países. En la muestra chilena se incorporan 5081 estudiantes de octavo básico, de 178 escuelas del país. Algunas de las variables independientes que se utilizaron tenían casos perdidos, estos fueron eliminados con el código "na.omit". Por un lado, a nivel individual o de estudiante, se perdieron 235 casos, los cuales equivalen al 4,6% de los casos. Por otro lado, a nivel de escuela se perdieron 7 casos, los cuales equivalen al 3,9% de los casos originales. En ambos casos la cantidad de casos perdidos representa un bajo porcentaje del total de la muestra.
 
-##Variables
+## Variables
 Para responder a las preguntas de esta investigación se han considerado relevantes siete variables de esta base de datos. La variable dependiente de este estudio es "Conocimiento Cívico" (PV1CIV), la cual es resultado de un procedimiento basado en la teoría de respuesta al ítem para estimar los valores plausibles de conocimiento cívico de cada estudiante a partir de sus respuestas a 87 preguntas. Los puntajes fluctúan entre el 0 y el 800, en una escala que va desde el nulo conocimiento cívico (0) a mucho conocimiento cívico (800). 
 
 Las variables independientes a nivel individual son género y nivel socioeconómico. El género del estudiante (S_Gender) distingue entre hombre (0) y mujer (1). El nivel socioeconómico de la familia a la que pertenece el estudiante está construido a partir de tres variables; el nivel educacional más alto alcanzado por los padres que va desde educación básica incompleta a educación superior completa, de esta variable se eliminan las respuestas inválidas, no administradas y omitidas, el estatus ocupacional de los padres donde se eliminaran las respuestas inválida, no administradas y omitidas y la cantidad de libros existentes en el hogar del estudiante que se compone de  "ningún libro o muy pocos (0-10)", "Suficientes para rellenar un estante (11-25)", "Suficiente para rellenar un librero (26-100)", "Suficiente para llenar dos libreros (101-200)", "suficiente para llenar tres o más libreros (más de 200 libros)", de la cual se eliminarán los casos inválidos, no administrados y omitidos.  

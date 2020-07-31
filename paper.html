@@ -1300,13 +1300,13 @@ window.initializeCodeFolding = function(show) {
   var currentIndex = 1;
 
   // select all R code blocks
-  var rCodeBlocks = $('pre.r, pre.python, pre.bash, pre.sql, pre.cpp, pre.stan, pre.julia, pre.foldable');
+  var rCodeBlocks = $('pre.r, pre.python, pre.bash, pre.sql, pre.cpp, pre.stan, pre.julia');
   rCodeBlocks.each(function() {
 
     // create a collapsable div to wrap the code in
     var div = $('<div class="collapse r-code-collapse"></div>');
-    show = (show || $(this).hasClass('fold-show')) && !$(this).hasClass('fold-hide');
-    if (show) div.addClass('in');
+    if (show || $(this)[0].classList.contains('fold-show'))
+      div.addClass('in');
     var id = 'rcode-643E0F36' + currentIndex++;
     div.attr('id', id);
     $(this).before(div);
@@ -1607,7 +1607,15 @@ div.tocify {
 <li><p><em>Hipótesis 1:</em> Pertenecer al género femenino posee un efecto positivo significativo sobre el conocimiento cívico.</p></li>
 <li><p><em>Hipótesis 2:</em> Mientras más alto sea el nivel socioeconómico de la familia a la que pertenece el estudiante, mayor será el conocimiento cívico de este.</p></li>
 </ul>
-<p><em>Hipótesis de nivel 2:</em> * <em>Hipótesis 3:</em> Pertenecer a una escuela donde, en promedio, las familias de los estudiantes pertenecen a un nivel socioeconómico alto posee un efecto positivo significativo sobre el conocimiento cívico del estudiante. * <em>Hipótesis 4:</em> Pertenecer a una escuela donde, en promedio, la mayoría de los estudiantes consideran relevante la participación posee un efecto positivo significativo sobre el conocimiento cívico del estudiante. * <em>Hipótesis 5:</em> Pertenecer a una escuela donde, en promedio, la mayoría de los estudiantes percibe que existe una apertura a la discusión en el aula, posee un efecto positivo y significativo sobre el conocimiento cívico del estudiante. * <em>Hipótesis 6:</em> Pertenecer a una escuela con un buen clima en el aula posee un efectivo positivo y significativo sobre el conocimiento cívico del estudiante. * <em>Hipótesis 7:</em> Pertenecer a una escuela con más espacios de participación posee un efecto positivo y significativo sobre el conocimiento cívico del estudiante. * <em>Hipótesis 8:</em> Estas características de la escuela, permiten moderar el efecto de las características individuales sobre el conocimiento cívico.</p>
+<p><em>Hipótesis de nivel 2:</em></p>
+<ul>
+<li><p><em>Hipótesis 3:</em> Pertenecer a una escuela donde, en promedio, las familias de los estudiantes pertenecen a un nivel socioeconómico alto posee un efecto positivo significativo sobre el conocimiento cívico del estudiante.</p></li>
+<li><p><em>Hipótesis 4:</em> Pertenecer a una escuela donde, en promedio, la mayoría de los estudiantes consideran relevante la participación posee un efecto positivo significativo sobre el conocimiento cívico del estudiante.</p></li>
+<li><p><em>Hipótesis 5:</em> Pertenecer a una escuela donde, en promedio, la mayoría de los estudiantes percibe que existe una apertura a la discusión en el aula, posee un efecto positivo y significativo sobre el conocimiento cívico del estudiante.</p></li>
+<li><p><em>Hipótesis 6:</em> Pertenecer a una escuela con un buen clima en el aula posee un efectivo positivo y significativo sobre el conocimiento cívico del estudiante.</p></li>
+<li><p><em>Hipótesis 7:</em> Pertenecer a una escuela con más espacios de participación posee un efecto positivo y significativo sobre el conocimiento cívico del estudiante.</p></li>
+<li><p><em>Hipótesis 8:</em> Estas características de la escuela, permiten moderar el efecto de las características individuales sobre el conocimiento cívico.</p></li>
+</ul>
 <h1 id="variables-relevantes">Variables relevantes</h1>
 <h2 id="nivel-1"><em>Nivel 1</em></h2>
 <ol style="list-style-type: lower-alpha">
@@ -1636,7 +1644,7 @@ div.tocify {
 <li><p>IS3G21D: Students can have more influence on what happens in schools if they act together rather than alone.</p></li>
 <li><p>IS3G21E: Voting in student elections can make a difference to what happens at schools.</p></li>
 </ul></li>
-<li><p><strong>S_OPDISC: PercepciÃ³n de los estudiantes de apertura en las discusiones en el aula [AGREGADA]: When discussing political or social issues during regular lessons, how often do the following things happen?</strong></p>
+<li><p><strong>S_OPDISC: Percepción de los estudiantes de apertura en las discusiones en el aula [AGREGADA]: When discussing political or social issues during regular lessons, how often do the following things happen?</strong></p>
 <ul>
 <li><p>IS3G17A: Teachers encourage students to make up their own minds.</p></li>
 <li><p>IS3G17B: Teachers encourage students to express their opinions.</p></li>
@@ -1645,7 +1653,7 @@ div.tocify {
 <li><p>IS3G17E: Teachers encourage students to discuss the issues with people having different opinions.</p></li>
 <li><p>IS3G17F: Teachers present several sides of the issues when explaining them in class.</p></li>
 </ul></li>
-<li><p><strong>Clima escolar</strong> Se evaluarÃ¡ el efecto diferenciado de sus tres componentes:</p>
+<li><p><strong>Clima escolar</strong> Se evaluará el efecto diferenciado de sus tres componentes:</p>
 <ul>
 <li><p>S_STUTREL: Students’ perception of student-teacher relations at school.</p>
 <ol style="list-style-type: decimal">
@@ -1671,7 +1679,7 @@ div.tocify {
 <li><p>IS3G20F A student posted offensive pictures or text about you on the Internet</p></li>
 </ol></li>
 </ul></li>
-<li><p><strong>C_ENGAGE: Espacios de participaciÃ³n en la escuela para estudiantes: To what extent do the following statements apply to the current situation at this school?</strong> (1 = To a large extent, 2 = To a moderate extent, 3 = To a small extent, 4 = Not at all)</p>
+<li><p><strong>C_ENGAGE: Espacios de participación en la escuela para estudiantes: To what extent do the following statements apply to the current situation at this school?</strong> (1 = To a large extent, 2 = To a moderate extent, 3 = To a small extent, 4 = Not at all)</p>
 <ul>
 <li><p>IC3G08A: Teachers are involved in decision-making processes.</p></li>
 <li><p>IC3G08B: Parents are involved in decision-making processes.</p></li>
@@ -1683,10 +1691,11 @@ div.tocify {
 </ol>
 <h2 id="cluster-variable"><em>Cluster variable</em></h2>
 <pre><code>  * Idschool: School id.   </code></pre>
-<p>#Datos, variables y métodos</p>
+<h1 id="datos-variables-y-métodos">Datos, variables y métodos</h1>
 <h2 id="datos">Datos</h2>
 <p>Se utilizaron los datos correspondientes a Chile del último estudio Internacional sobre Educación Cívica y Ciudadana <span class="citation">(“ICCS” <a href="#ref-ICCS" role="doc-biblioref">n.d.</a>)</span> de la IEA, aplicado el año 2016 en 28 países. En la muestra chilena se incorporan 5081 estudiantes de octavo básico, de 178 escuelas del país. Algunas de las variables independientes que se utilizaron tenían casos perdidos, estos fueron eliminados con el código “na.omit”. Por un lado, a nivel individual o de estudiante, se perdieron 235 casos, los cuales equivalen al 4,6% de los casos. Por otro lado, a nivel de escuela se perdieron 7 casos, los cuales equivalen al 3,9% de los casos originales. En ambos casos la cantidad de casos perdidos representa un bajo porcentaje del total de la muestra.</p>
-<p>##Variables Para responder a las preguntas de esta investigación se han considerado relevantes siete variables de esta base de datos. La variable dependiente de este estudio es “Conocimiento Cívico” (PV1CIV), la cual es resultado de un procedimiento basado en la teoría de respuesta al ítem para estimar los valores plausibles de conocimiento cívico de cada estudiante a partir de sus respuestas a 87 preguntas. Los puntajes fluctúan entre el 0 y el 800, en una escala que va desde el nulo conocimiento cívico (0) a mucho conocimiento cívico (800).</p>
+<h2 id="variables">Variables</h2>
+<p>Para responder a las preguntas de esta investigación se han considerado relevantes siete variables de esta base de datos. La variable dependiente de este estudio es “Conocimiento Cívico” (PV1CIV), la cual es resultado de un procedimiento basado en la teoría de respuesta al ítem para estimar los valores plausibles de conocimiento cívico de cada estudiante a partir de sus respuestas a 87 preguntas. Los puntajes fluctúan entre el 0 y el 800, en una escala que va desde el nulo conocimiento cívico (0) a mucho conocimiento cívico (800).</p>
 <p>Las variables independientes a nivel individual son género y nivel socioeconómico. El género del estudiante (S_Gender) distingue entre hombre (0) y mujer (1). El nivel socioeconómico de la familia a la que pertenece el estudiante está construido a partir de tres variables; el nivel educacional más alto alcanzado por los padres que va desde educación básica incompleta a educación superior completa, de esta variable se eliminan las respuestas inválidas, no administradas y omitidas, el estatus ocupacional de los padres donde se eliminaran las respuestas inválida, no administradas y omitidas y la cantidad de libros existentes en el hogar del estudiante que se compone de “ningún libro o muy pocos (0-10)”, “Suficientes para rellenar un estante (11-25)”, “Suficiente para rellenar un librero (26-100)”, “Suficiente para llenar dos libreros (101-200)”, “suficiente para llenar tres o más libreros (más de 200 libros)”, de la cual se eliminarán los casos inválidos, no administrados y omitidos.</p>
 <p>Las variables independientes de nivel 2 son: composición socioeconómica de la escuela, cultura participativa, clima escolar y percepción de discusiones en el aula. En primer lugar, la composición socioeconómica de la escuela corresponde a la variable nivel socioeconómico del estudiante a nivel agregado, adoptando los valores de las medias de nivel socioeconómico por escuela. En segundo lugar, la cultura participativa de los estudiantes (IS3G17A-IS3G17F) (agregada) se mide a partir de el acuerdo o desacuerdo con las declaraciones sobre la participación de los estudiantes de la escuela que va desde 1 “totalmente de acuerdo” a 7 “totalmente en desacuerdo” las frases son las siguientes; a) La participación de los estudiantes en el funcionamiento de las escuelas puede mejorarlas. b) Pueden ocurrir muchos cambios positivos en las escuelas cuando los estudiantes trabajan juntos. c) Organizar grupos de estudiantes para expresar sus opiniones podría ayudar a resolver problemas en las escuelas. d) Los estudiantes pueden tener más influencia sobre lo que sucede en las escuelas si actúan juntos y no solos. e) Votar en las elecciones estudiantiles puede marcar una diferencia en lo que sucede en las escuelas. En tercer lugar, la variable clima escolar posee tres componentes; a) La percepción del estudiante acerca de la relación entre profesores y estudiantes, b) la percepción del estudiante acerca de las relaciones entre estudiantes, y c) la percepción del estudiante sobre abuso verbal y físico en la escuela. En cuarto y último lugar, la variable dependiente espacios de participación en la escuela para estudiantes (IS3G17A-IS3G17F) está medida a partir de la respuesta de los estudiantes a la pregunta ¿En qué medida se aplican las siguientes declaraciones a la situación actual en tú escuela? ante la que se le presentan las siguientes situaciones: “Los docentes participan en los procesos de decisiones”, “Los padres participan en los procesos de toma de decisiones”, “Las opiniones de los estudiantes se tienen en cuenta en los procesos de toma de decisiones”, “El personal docente y no docente, los estudiantes y los padres siguen las reglas y regulaciones”, “Los estudiantes tienen la oportunidad de participar activamente en las decisiones escolares”, “Los padres reciben información sobre el rendimiento escolar y del alumno”. En cuarto y último lugar, la percepción de los estudiantes en las discusiones en el aula (agregada) esta se mide, a partir de cuan seguido tienen los estudiantes determinados actos sobre discusión política o hechos sociales durante clases estos son los siguientes; “Los maestros alientan a los estudiantes a tomar sus propias decisiones.”, “los maestros alientan a los estudiantes a expresar sus opiniones.”, “Los estudiantes presentan eventos políticos actuales para su discusión en clase.” “Los estudiantes expresan opiniones en clase incluso cuando sus opiniones son diferentes de la mayoría de los otros estudiantes.” “Los maestros alientan a los estudiantes a discutir los problemas con personas que tienen opiniones diferentes.” “Los maestros presentan varios lados de los problemas cuando los explican en clase.”</p>
 <h2 id="método">Método</h2>
@@ -1853,7 +1862,7 @@ $(document).ready(function ()  {
       theme: "bootstrap3",
       context: '.toc-content',
       hashGenerator: function (text) {
-        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_');
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_').toLowerCase();
       },
       ignoreSelector: ".toc-ignore",
       scrollTo: 0
