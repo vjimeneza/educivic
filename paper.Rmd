@@ -11,8 +11,9 @@ output:
      toc_depth: 2
      number_sections: false
      code_folding: show
-bibliography: "input/bib/Mi_biblioteca.bib"
-cls: "input/bib/apa6.cls""
+bibliography: 
+  - input/bib/Mi_biblioteca.bib
+cls: input/bib/apa6.cls
 linkcolor: blue
 link-citations: yes
 ---
