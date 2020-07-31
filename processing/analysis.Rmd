@@ -37,7 +37,6 @@ basecor<-select(data,m_nse, nse, m_cult_part, m_apert_disc, m_esp_part,m_nse, PV
 
 datacor<-cor(basecor)
 datacor <- corrplot.mixed(datacor)
-
 ```
 
 # Análisis multinivel
