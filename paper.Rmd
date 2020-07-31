@@ -213,6 +213,8 @@ Donde $\gamma_{ij}$ es el valor de la variable dependiente, en este caso el punt
 
 ## Análisis descriptivos
 
+![Distribución del conocimiento cívico](output/graphs/histograma.png)
+
 ### Análisis descriptivo de variable dependiente:
 
 Los datos descriptivos de la variable conocimiento cívico, nos indican que en promedio los estudiantes poseen 488.7 puntos en conocimiento cívico, lo cual corresponde a un conocimiento cívico medio. La mitad de los estudiantes tiene un conocimiento cívico menor a 492 puntos, es decir, un conocimiento cívico medio a bajo. El estudiante que tiene mayor conocimiento cívico obtuvo 782 puntos. Sin embargo, el 75% de los estudiantes tienen un conocimiento cívico menor a 600 puntos. 
@@ -227,10 +229,20 @@ A partir de los datos descriptivos de la variable "cultura participativa" destac
 
 ## Análisis bivariado 
 
+![Relación entre las variables](output/graphs/corrplot.png)
+
 Como puede verse existen relaciones de mediana intensidad entre las variables a nivel escuela. Destaca la relación que existe entre el nivel socioeconómico promedio de los padres y el conocimiento cívico del estudiante. Además, aquellos colegios que poseen una apertura a la discusión, poseen también, en promedio, buenas actitudes hacia la participación, al mismo tiempo que ambas variables se relacionan de manera moderada con el conocimiento cívico del estudiante. La única variable que parece no dar cuenta de un espacio propicio para el conocimiento cívico es aquella que refiere a los espacios de participación en el colegio, lo cual puede deberse a la mala calidad de estos espacios de participación. También parece existir una relación entre el nse promedio y la apertura que existe a la discusión. Por último, como bien destaca la literatura, existe una alta segregación escolar que se evidencia en la relación entre el nse del estudiante y el nse promedio del colegio. En suma, tomando en cuenta que la relación más fuerte con el conocimiento cívico es la del promedio del nse de la escuela, podemos decir que es probable que nuestra hipótesis respecto al control del nse propio por el de la escuela puede tener futuro.
 
 ## Análisis multinivel
 ### Modelo nulo  
+
+
+```{r results='asis'}
+library(texreg)
+load(file = "output/graphs/model_nulo.Rdata")
+htmlreg(results_0) 
+
+```
 
 En primer lugar, en el modelo nulo se presenta el conocimiento cívico de nivel estudiante y el efecto aleatorio del intercepto de esta variable, según escuela. Es decir, no se incorporan otras variables de nivel estudiante o escuela al modelo, más que el conocimiento cívico e id de las escuelas. El modelo fue ajustado a partir de una muestra de 4846 estudiantes anidados en 171 escuelas. 
 Se presenta en los resultados, la estimación de un puntaje promedio de 487.153 para la población, a través de todas las escuelas, como gran intercepto, asociado a un error estándar de 4.56. El resultado presenta las varianzas y desviaciones estándar del intercepto aleatorio, reconociéndose una varianza de 3295 y una desviación estándar de 57.41. Lo cual significa que, en promedio, el puntaje de conocimiento cívico de las escuelas se aleja en 57.41 puntos del promedio general entre estudiantes o gran intercepto. En los residuos se reconoce la desviación estándar en el nivel 1, es decir, a nivel de estudiante. Por lo tanto, en promedio, los estudiantes se alejan en 77.15 puntos del promedio de puntaje en conocimiento cívico de la muestra
@@ -240,7 +252,10 @@ Para estimar el efecto del contexto escolar sobre el conocimiento cívico, en pr
 
 El estimador que da cuenta de la proporción entre factores de nivel individual y contextual que tienen efecto sobre la varianza de la variable dependiente es la correlación intraclase. Esta se obtiene a partir de una proporción entre la varianza asociada a la escuela (3295) y la de esta sumada a la varianza a nivel estudiantes (3295+5951). Por lo tanto, posee un valor de 0.356, lo cual implica que un 35.6% de la varianza del puntaje en conocimiento cívico se asocia a la escuela, nuestra variable de contexto o nivel 2. El resto de la proporción de la varianza estaría asociada a factores de nivel individual, es decir, entre estudiantes dentro de la escuela. A partir de aquello se puede decir que una alta proporción de la varianza del puntaje en conocimiento cívico se asocia a las escuelas, es decir, que hay una gran varianza entre escuelas. Ahora bien ¿Cuáles son las características de la escuela que explican este porcentaje de la varianza del puntaje de conocimiento cívico asociado a las escuelas?
 
-### Comparación de modelos
+### Comparación de modelos 
+
+![Influencia de la socialización de la familia y la escuela](output/graphs/reg1.png)
+
 Se desarrollaron seis modelos que incorporan progresivamente las variables relevantes para el análisis. El modelo 1 incorpora solo variables individuales (género, origen socioeconómico). El modelo 2 integra variables sobre las cuales el colegio tiene poca injerencia, las cuales denominaremos variables estructurales (i.e. género del estudiante, origen socioeconómico del estudiante, promedio del origen socioeconómico). Los modelos siguientes integran variables sobre el ambiente escolar: el modelo 2 incorpora variables relacionadas con un _ambiente democrático_ (i.e. actitudes a la participación, apertura a la discusión y espacios participativos). El modelo 3 referidas al _clima escolar_ (i.e. relación con los profesores y entre los estudiantes), el modelo 4 incorpora las variables de ambiente democrático y de clima escolar. El modelo 5, por último, incorpora todas las variables (Tabla 2).
 
 El modelo 1, nos presenta una relación positiva entre ser mujer o ser de origen socioeconómico algo y el conocimiento cívico. Esta relación entre origen y conocimiento cívico es en parte controlada en el modelo siguiente, dando cuenta de que parte de dicho efecto corresponde a la participación en establecimientos con estudiantes de familias con alto NSE.
@@ -268,19 +283,21 @@ De este modo, se reconoce que la cultura participativa, la apertura a la discusi
 
 Al incorporarse las variables de nivel 2, se reconoce la misma relación entre variables de nivel 1 y conocimiento cívico, de tal modo que todos los casos poseen la misma pendiente. A pesar de ello, estos modelos no se originan en un gran intercepto, sino que estos son diferenciados entre las escuelas, de modo que son aleatorios en relación a la varianza dada según las variables incorporadas. Es decir, a partir de las variables de nivel 2 se produce un cambio en el promedio de conocimiento cívico por escuela, pero la variación de este según variables de nivel 1 se presenta como igual entre escuelas. Por lo tanto, cabe preguntarse: ¿El efecto del nivel socioeconómico del estudiante sobre su conocimiento cívico varía entre las escuelas? 
 
-### Comparación de modelos 6-8
+### Comparación de modelos 6-8 
+
+![Comparación de modelo: pendiente aleatoria e interacción](output/graphs/comp_model.Rdata) 
+
 En la tabla 3 se presentan dos modelos adicionales. Los modelos anteriores daban cuenta de la influencia de variables de nivel 2 sobre el intercepto de la variable dependiente. Por su parte, estos nuevos modelos profundizan en la influencia de estas variables incorporando aleatorización y moderación.
 
 El modelo 7 incorpora todas las variables señaladas, pero aleatoriza el efecto de la variable nivel socioeconómico. Así, se pretende reconocer de qué manera varía, entre escuelas, el efecto del nivel socioeconómico en el conocimiento cívico. Al incorporar el nivel socioeconómico del estudiante con pendiente aleatoria, los betas de regresión varían sutilmente o se mantienen y su significación estadística se mantiene. El efecto aleatorio se presenta en la varianza del nivel socioeconómico según escuela, la cual tiene un valor de 55.10. A partir del análisis de comparación de modelos utilizado anova, podemos decir solo con un 95% de confianza, que existe una mejora del modelo al incorporar la aleatorización (p-value=0.02162)
 
 Finalmente, cabe preguntarse ¿Alguna de las variables de nivel 2, vale decir, de la escuela, permite moderar la desigualdad socioeconómica en el conocimiento cívico? Se agrega un efecto de moderación entre variables en el modelo 8. De este modo, se presenta la pendiente aleatoria del efecto del nivel socioeconómico individual hacia el conocimiento cívico moderada por la composición socioeconómica de la escuela. Este efecto de moderación no es significativo, a lo que se agrega que no existe una diferencia significativa entre el modelo con pendiente aleatoria y el modelo con pendiente aleatoria e interacción entre niveles (p-value = 0.4887).
 
-Cabe señalar que este ejercicio se realizó con las variables de clima escolar y de cultura participativa, obteniéndose resultados similares. En consideración de esto podemos decir que ninguna de las variables revisadas en este artículo son capaces de explicar la variación de la pendiente aleatorizada entre origen socioeconómico y conocimiento cívico.
+Cabe señalar que este ejercicio se realizó con las variables de clima escolar y de cultura participativa, obteniéndose resultados similares. En consideración de esto podemos decir que ninguna de las variables revisadas en este artículo son capaces de explicar la variación de la pendiente aleatorizada entre origen socioeconómico y conocimiento cívico. 
 
-### Plot
-```{r}
 
-```
+![Interacción entre conocimiento cívico y nivel socioeconómico del estudiante y colegio](output/graphs/interaccion.png) 
+
 
 ### Ajuste de los modelos: Ajuste por proporción de varianzas 
 
