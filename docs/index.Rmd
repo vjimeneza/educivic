@@ -1,0 +1,21 @@
+---
+title: "¿Como disminuir la desigualdad del conocimiento civico?"
+csl: "../input/bib/apa6.csl"
+bibliography: "../input/bib/zlibrary.bib"
+author: " "
+output:
+    html_document:
+        smart: false
+        includes:
+          in_header: head_github-activity.html
+---
+<div style="text-align: justify">
+
+# Resumen: 
+
+Las democracias se enfrentan actualmente a problemas de legitimidad que se relacionan, entre otras cosas, con la baja y desigual participación política entre grupos sociales (Bargsted, Somma, Joigted, Campos y Joignant, 2017; Janmaat, 2013; Contreras y Navia, 2010; Browne y Elming, 2015; Miranda, Castillo y Sandoval-Hernández, 2015), subrepresentando principalmente a los jóvenes y grupos de bajo nivel socioeconómico. Más aún, existe un registrado efecto intergeneracional de reproducción de la desigualdad politica, debido al cual jóvenes de sectores vulnerables poseen menores puntajes en los indicadores de actitudes, conocimientos y habilidades necesarias para la vida ciudadana(Miranda, 2017, Amnå et al., 2009; Brady et al., 2015; Quintelier y Hooghe, 2013; Wasburn y Covert, 2017;Castillo, Miranda, Bonhomme, Cox, y Bascopé, 2014; Schlozman et al., 2012; Sidney Verba et al., 2003). La literatura señala que las desigualdades de origen del conocimiento civico se relacionan más con variables de tipo cultural que economico, como la cantidad de libros en el hogar. En consideracion de la bibliografia, este articulo propone el conocimiento civico es fuertemente afectado por la comprension lectora de los estudiantes. Para probar dicha hipotesis se realizo un analisis multinivel con los datos para chile de la encuesta ICCS. A partir de este analisis podemos concluir que la comprension lectora posee un fuerte y robusto efecto sobre el conocimiento civico, el cual controla en buena medida el efecto de las variables de origen. Ademas se genera evidecia que nos permite señalar que estudiantes de sectores vulnerables con buena comprension lectora, no se encuentran en desventaja frente a sus iguales de colegios más acomodados, lo cual suguiere que mejorar la comprension lectora de los sectores populares puede ayudar a disminuir este problema. 
+
+
+
+
+

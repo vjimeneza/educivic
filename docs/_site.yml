@@ -1,0 +1,16 @@
+name: "meritredist2019"
+output_dir: "." # Esto es para que se compile en el rootdir
+
+
+navbar:
+  title: "Practicas escolares contra la desigualdad politica"
+  right:
+    - text: "Artículo"
+      href: "prod_holi.html"
+
+
+
+output:
+  html_document:
+    css: "../input/css/custom.css"
+    theme: united

@@ -4,7 +4,7 @@ author: "Yanara Jerez, Adonai Arancibia, Anais Herrera, Francisco Meneses y Vict
 date: "31 de julio de 2020"
 output:
   html_document:
-     theme: flatly
+     theme: united
      highlight: tango
      toc: true
      toc_float: true
@@ -12,8 +12,8 @@ output:
      number_sections: false
      code_folding: show
 bibliography: 
-  - input/bib/Mi_biblioteca.bib
-cls: input/bib/apa6.cls
+  - "../input/bib/Mi_biblioteca.bib"
+cls: "../input/bib/apa6.cls"
 linkcolor: blue
 link-citations: yes
 ---
@@ -213,7 +213,7 @@ Donde $\gamma_{ij}$ es el valor de la variable dependiente, en este caso el punt
 
 ## Análisis descriptivos
 
-![Distribución del conocimiento cívico](output/graphs/histograma.png)
+![Distribución del conocimiento cívico](../output/graphs/histograma.png)
 
 ### Análisis descriptivo de variable dependiente:
 
@@ -229,7 +229,7 @@ A partir de los datos descriptivos de la variable "cultura participativa" destac
 
 ## Análisis bivariado 
 
-![Relación entre las variables](output/graphs/corrplot.png)
+![Relación entre las variables](../output/graphs/corrplot.png)
 
 Como puede verse existen relaciones de mediana intensidad entre las variables a nivel escuela. Destaca la relación que existe entre el nivel socioeconómico promedio de los padres y el conocimiento cívico del estudiante. Además, aquellos colegios que poseen una apertura a la discusión, poseen también, en promedio, buenas actitudes hacia la participación, al mismo tiempo que ambas variables se relacionan de manera moderada con el conocimiento cívico del estudiante. La única variable que parece no dar cuenta de un espacio propicio para el conocimiento cívico es aquella que refiere a los espacios de participación en el colegio, lo cual puede deberse a la mala calidad de estos espacios de participación. También parece existir una relación entre el nse promedio y la apertura que existe a la discusión. Por último, como bien destaca la literatura, existe una alta segregación escolar que se evidencia en la relación entre el nse del estudiante y el nse promedio del colegio. En suma, tomando en cuenta que la relación más fuerte con el conocimiento cívico es la del promedio del nse de la escuela, podemos decir que es probable que nuestra hipótesis respecto al control del nse propio por el de la escuela puede tener futuro.
 
@@ -239,7 +239,7 @@ Como puede verse existen relaciones de mediana intensidad entre las variables a 
 
 ```{r results='asis'}
 library(texreg)
-load(file = "output/graphs/model_nulo.Rdata")
+load(file = "../output/graphs/model_nulo.Rdata")
 htmlreg(results_0) 
 
 ```
@@ -254,7 +254,7 @@ El estimador que da cuenta de la proporción entre factores de nivel individual 
 
 ### Comparación de modelos 
 
-![Influencia de la socialización de la familia y la escuela](output/graphs/reg1.png)
+![Influencia de la socialización de la familia y la escuela](../output/graphs/reg1.png)
 
 Se desarrollaron seis modelos que incorporan progresivamente las variables relevantes para el análisis. El modelo 1 incorpora solo variables individuales (género, origen socioeconómico). El modelo 2 integra variables sobre las cuales el colegio tiene poca injerencia, las cuales denominaremos variables estructurales (i.e. género del estudiante, origen socioeconómico del estudiante, promedio del origen socioeconómico). Los modelos siguientes integran variables sobre el ambiente escolar: el modelo 2 incorpora variables relacionadas con un _ambiente democrático_ (i.e. actitudes a la participación, apertura a la discusión y espacios participativos). El modelo 3 referidas al _clima escolar_ (i.e. relación con los profesores y entre los estudiantes), el modelo 4 incorpora las variables de ambiente democrático y de clima escolar. El modelo 5, por último, incorpora todas las variables (Tabla 2).
 
@@ -288,12 +288,12 @@ Al incorporarse las variables de nivel 2, se reconoce la misma relación entre v
 ```{r results='asis'}
 library(texreg)
 
-load(file = "output/graphs/results_6.Rdata")
-load(file = "output/graphs/results_7.Rdata")
-load(file = "output/graphs/results_8.Rdata")
+load(file = "../output/graphs/results_6.Rdata")
+load(file = "../output/graphs/results_7.Rdata")
+load(file = "../output/graphs/results_8.Rdata")
 
 
-load(file = "output/graphs/comp_model.Rdata")
+load(file = "../output/graphs/comp_model.Rdata")
 htmlreg(list(results_6,results_7,results_8), caption = "Comparación de modelo: pendiente aleatoria e interacción") 
 
 ```
@@ -307,7 +307,7 @@ Finalmente, cabe preguntarse ¿Alguna de las variables de nivel 2, vale decir, d
 Cabe señalar que este ejercicio se realizó con las variables de clima escolar y de cultura participativa, obteniéndose resultados similares. En consideración de esto podemos decir que ninguna de las variables revisadas en este artículo son capaces de explicar la variación de la pendiente aleatorizada entre origen socioeconómico y conocimiento cívico. 
 
 
-![Interacción entre conocimiento cívico y nivel socioeconómico del estudiante y colegio](output/graphs/interaccion.png) 
+![Interacción entre conocimiento cívico y nivel socioeconómico del estudiante y colegio](../output/graphs/interaccion.png) 
 
 
 ### Ajuste de los modelos: Ajuste por proporción de varianzas 
