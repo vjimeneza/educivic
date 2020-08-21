@@ -439,7 +439,7 @@ div.tocify {
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li>
-  <a href="Paper.html">Artículo</a>
+  <a href="paper.html">Artículo</a>
 </li>
       </ul>
     </div><!--/.nav-collapse -->
@@ -617,9 +617,15 @@ div.tocify {
 <p>Como puede verse existen relaciones de mediana intensidad entre las variables a nivel escuela. Destaca la relación que existe entre el nivel socioeconómico promedio de los padres y el conocimiento cívico del estudiante. Además, aquellos colegios que poseen una apertura a la discusión, poseen también, en promedio, buenas actitudes hacia la participación, al mismo tiempo que ambas variables se relacionan de manera moderada con el conocimiento cívico del estudiante. La única variable que parece no dar cuenta de un espacio propicio para el conocimiento cívico es aquella que refiere a los espacios de participación en el colegio, lo cual puede deberse a la mala calidad de estos espacios de participación. También parece existir una relación entre el nse promedio y la apertura que existe a la discusión. Por último, como bien destaca la literatura, existe una alta segregación escolar que se evidencia en la relación entre el nse del estudiante y el nse promedio del colegio. En suma, tomando en cuenta que la relación más fuerte con el conocimiento cívico es la del promedio del nse de la escuela, podemos decir que es probable que nuestra hipótesis respecto al control del nse propio por el de la escuela puede tener futuro.</p>
 <h2 id="análisis-multinivel">Análisis multinivel</h2>
 <h3 id="modelo-nulo">Modelo nulo</h3>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" title="1"><span class="kw">library</span>(texreg)</a>
-<a class="sourceLine" id="cb2-2" title="2"><span class="kw">load</span>(<span class="dt">file =</span> <span class="st">&quot;../output/graphs/model_nulo.Rdata&quot;</span>)</a>
-<a class="sourceLine" id="cb2-3" title="3"><span class="kw">htmlreg</span>(results_<span class="dv">0</span>) </a></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" title="1"><span class="kw">library</span>(texreg)</a></code></pre></div>
+<pre><code>## Version:  1.37.4
+## Date:     2020-06-14
+## Author:   Philip Leifeld (University of Essex)
+## 
+## Consider submitting praise using the praise or praise_interactive functions.
+## Please cite the JSS article in your publications -- see citation(&quot;texreg&quot;).</code></pre>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb4-1" title="1"><span class="kw">load</span>(<span class="dt">file =</span> <span class="st">&quot;../output/graphs/model_nulo.Rdata&quot;</span>)</a>
+<a class="sourceLine" id="cb4-2" title="2"><span class="kw">htmlreg</span>(results_<span class="dv">0</span>) </a></code></pre></div>
 <table class="texreg" style="margin: 10px auto;border-collapse: collapse;border-spacing: 0px;caption-side: bottom;color: #000000;border-top: 2px solid #000000;">
 <caption>
 Statistical models
@@ -739,15 +745,15 @@ Var: Residual
 <p>De este modo, se reconoce que la cultura participativa, la apertura a la discusión y la composición socioeconómica sí tienen efectos significativos sobre el conocimiento cívico, mientras que el clima escolar y los espacios de participación, siguiendo la manera en que están medidos por la ICCS, no tienen un efecto significativo sobre este.</p>
 <p>Al incorporarse las variables de nivel 2, se reconoce la misma relación entre variables de nivel 1 y conocimiento cívico, de tal modo que todos los casos poseen la misma pendiente. A pesar de ello, estos modelos no se originan en un gran intercepto, sino que estos son diferenciados entre las escuelas, de modo que son aleatorios en relación a la varianza dada según las variables incorporadas. Es decir, a partir de las variables de nivel 2 se produce un cambio en el promedio de conocimiento cívico por escuela, pero la variación de este según variables de nivel 1 se presenta como igual entre escuelas. Por lo tanto, cabe preguntarse: ¿El efecto del nivel socioeconómico del estudiante sobre su conocimiento cívico varía entre las escuelas?</p>
 <h3 id="comparación-de-modelos-6-8">Comparación de modelos 6-8</h3>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb3-1" title="1"><span class="kw">library</span>(texreg)</a>
-<a class="sourceLine" id="cb3-2" title="2"></a>
-<a class="sourceLine" id="cb3-3" title="3"><span class="kw">load</span>(<span class="dt">file =</span> <span class="st">&quot;../output/graphs/results_6.Rdata&quot;</span>)</a>
-<a class="sourceLine" id="cb3-4" title="4"><span class="kw">load</span>(<span class="dt">file =</span> <span class="st">&quot;../output/graphs/results_7.Rdata&quot;</span>)</a>
-<a class="sourceLine" id="cb3-5" title="5"><span class="kw">load</span>(<span class="dt">file =</span> <span class="st">&quot;../output/graphs/results_8.Rdata&quot;</span>)</a>
-<a class="sourceLine" id="cb3-6" title="6"></a>
-<a class="sourceLine" id="cb3-7" title="7"></a>
-<a class="sourceLine" id="cb3-8" title="8"><span class="kw">load</span>(<span class="dt">file =</span> <span class="st">&quot;../output/graphs/comp_model.Rdata&quot;</span>)</a>
-<a class="sourceLine" id="cb3-9" title="9"><span class="kw">htmlreg</span>(<span class="kw">list</span>(results_<span class="dv">6</span>,results_<span class="dv">7</span>,results_<span class="dv">8</span>), <span class="dt">caption =</span> <span class="st">&quot;Comparación de modelo: pendiente aleatoria e interacción&quot;) </span></a></code></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb5-1" title="1"><span class="kw">library</span>(texreg)</a>
+<a class="sourceLine" id="cb5-2" title="2"></a>
+<a class="sourceLine" id="cb5-3" title="3"><span class="kw">load</span>(<span class="dt">file =</span> <span class="st">&quot;../output/graphs/results_6.Rdata&quot;</span>)</a>
+<a class="sourceLine" id="cb5-4" title="4"><span class="kw">load</span>(<span class="dt">file =</span> <span class="st">&quot;../output/graphs/results_7.Rdata&quot;</span>)</a>
+<a class="sourceLine" id="cb5-5" title="5"><span class="kw">load</span>(<span class="dt">file =</span> <span class="st">&quot;../output/graphs/results_8.Rdata&quot;</span>)</a>
+<a class="sourceLine" id="cb5-6" title="6"></a>
+<a class="sourceLine" id="cb5-7" title="7"></a>
+<a class="sourceLine" id="cb5-8" title="8"><span class="kw">load</span>(<span class="dt">file =</span> <span class="st">&quot;../output/graphs/comp_model.Rdata&quot;</span>)</a>
+<a class="sourceLine" id="cb5-9" title="9"><span class="kw">htmlreg</span>(<span class="kw">list</span>(results_<span class="dv">6</span>,results_<span class="dv">7</span>,results_<span class="dv">8</span>), <span class="dt">caption =</span> <span class="st">&quot;Comparación de modelo: pendiente aleatoria e interacción&quot;) </span></a></code></pre></div>
 <table class="texreg" style="margin: 10px auto;border-collapse: collapse;border-spacing: 0px;caption-side: bottom;color: #000000;border-top: 2px solid #000000;">
 <caption>
 Comparación de modelo: pendiente aleatoria e interacción
