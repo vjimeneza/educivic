@@ -4,7 +4,7 @@ author: "Yanara Jerez, Adonai Arancibia, Anais Herrera, Francisco Meneses y Vict
 date: "31 de julio de 2020"
 output:
   html_document:
-     theme: united
+     theme: flatly
      highlight: tango
      toc: true
      toc_float: true
