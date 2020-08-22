@@ -6,7 +6,7 @@ navbar:
   title: "Practicas Escolares contra la desigualdad"
   left:
   - text: "Analisis de datos"
-    href: "../processing/prod_analysis.html"
+    href: prod_analysis.html
   - text: "Articulo"
     href: paper.html
   - icon: fa-envelope fa-lg
