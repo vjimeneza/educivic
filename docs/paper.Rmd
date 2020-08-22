@@ -1,7 +1,7 @@
 ---
 title: "¿Qué pueden hacer las escuelas para disminuir la desigualdad en el conocimiento cívico?"
-author: "Yanara Jerez, Adonai Arancibia, Anais Herrera, Francisco Meneses y Victor Jimenez"
-date: "31 de julio de 2020"
+author: "Autores: Anais Herrera, Francisco Meneses, Victor Jimenez, Alejandra Delaveau y Catalina Flores Editores: Yanara Jerez, Adonai Arancibia, Anais Herrera, Francisco Meneses y Victor Jimenez"
+date: "21 de agosto de 2020"
 output:
   html_document:
      theme: united
@@ -104,18 +104,17 @@ Esta investigación ha sido orientada por tres preguntas de investigación:
           3. IS3G11: Your Home and your Family/About how many books are there in your home (1 = None or very few (0-10 books), 2 = Enought to fill one shelf (11-25 books), 3 = Enought to fill one bookcase (26-100 books), 4 = Enought to fill two bookcase (101-200 books), 5 = Enought to fill three or more bookcase (more than 200 books), 7 = Invalid, 8 = Not administered, 9 = Omitted)  
 
 ## _Nivel 2: Variables independientes_
+  a. <div align="justify";> __S_VALPARTS: Cultura participativa de los estudiantes [AGREGADA]: How much do you agree or disagree with the following statements about student participation at school?__ (1 = Strongly agree, 2 = Agree, 3 = Disagree, 4 = Strongly disagree, 7 = Invalid, 8 = Not administered, 9 = Omitted) </div>  
 
-  a. __S_VALPARTS: Cultura participativa de los estudiantes [AGREGADA]: How much do you agree or disagree with the following statements about student participation at school?__ (1 = Strongly agree, 2 = Agree, 3 = Disagree, 4 = Strongly disagree, 7 = Invalid, 8 = Not administered, 9 = Omitted)  
+      * <div align="justify";> IS3G21A: Student participation in how schools are run can make schools better.</div>  
 
-      * IS3G21A: Student participation in how schools are run can make schools better.  
+      * <div align="justify";> IS3G21B: Lots of positive changes can happen in schools when students work together.</div> 
 
-      * IS3G21B: Lots of positive changes can happen in schools when students work together.  
+      * <div align="justify";> IS3G21C: Organizing groups of students to express their opinions could help solve problems in schools.</div> 
 
-      * IS3G21C: Organizing groups of students to express their opinions could help solve problems in schools.  
+      * <div align="justify";> IS3G21D: Students can have more influence on what happens in schools if they act together rather than alone.</div>  
 
-      * IS3G21D: Students can have more influence on what happens in schools if they act together rather than alone.  
-
-      * IS3G21E: Voting in student elections can make a difference to what happens at schools.  
+      * <div align="justify";> IS3G21E: Voting in student elections can make a difference to what happens at schools.</div> 
 
   b. __S_OPDISC: Percepción de los estudiantes de apertura en las discusiones en el aula [AGREGADA]: When discussing political or social issues during regular lessons, how often do the following things happen?__  
 
@@ -182,10 +181,10 @@ processes.
       * IC3G08E: Students are given the opportunity to actively participate in school decisions.  
 
       * IC3G08F: Parents are provided with information on the school and student performance.   
-
+      
 ## _Cluster variable_  
 
-      * Idschool: School id.   
+  * Idschool: School id.   
 
 # Datos, variables y métodos
 
@@ -213,7 +212,7 @@ Donde $\gamma_{ij}$ es el valor de la variable dependiente, en este caso el punt
 
 ## Análisis descriptivos
 
-![Distribución del conocimiento cívico](../output/graphs/histograma.png)
+![Distribución del conocimiento cívico](https://raw.githubusercontent.com/vjimeneza/educivic/master/output/graphs/histograma.png)
 
 ### Análisis descriptivo de variable dependiente:
 
@@ -229,19 +228,17 @@ A partir de los datos descriptivos de la variable "cultura participativa" destac
 
 ## Análisis bivariado 
 
-![Relación entre las variables](../output/graphs/corrplot.png)
+![Relación entre las variables](https://raw.githubusercontent.com/vjimeneza/educivic/master/output/graphs/corrplot.png)
 
 Como puede verse existen relaciones de mediana intensidad entre las variables a nivel escuela. Destaca la relación que existe entre el nivel socioeconómico promedio de los padres y el conocimiento cívico del estudiante. Además, aquellos colegios que poseen una apertura a la discusión, poseen también, en promedio, buenas actitudes hacia la participación, al mismo tiempo que ambas variables se relacionan de manera moderada con el conocimiento cívico del estudiante. La única variable que parece no dar cuenta de un espacio propicio para el conocimiento cívico es aquella que refiere a los espacios de participación en el colegio, lo cual puede deberse a la mala calidad de estos espacios de participación. También parece existir una relación entre el nse promedio y la apertura que existe a la discusión. Por último, como bien destaca la literatura, existe una alta segregación escolar que se evidencia en la relación entre el nse del estudiante y el nse promedio del colegio. En suma, tomando en cuenta que la relación más fuerte con el conocimiento cívico es la del promedio del nse de la escuela, podemos decir que es probable que nuestra hipótesis respecto al control del nse propio por el de la escuela puede tener futuro.
 
 ## Análisis multinivel
 ### Modelo nulo  
 
-
-```{r results='asis'}
+```{r results='asis', echo=FALSE, message=FALSE}
 library(texreg)
 load(file = "../output/graphs/model_nulo.Rdata")
 htmlreg(results_0) 
-
 ```
 
 En primer lugar, en el modelo nulo se presenta el conocimiento cívico de nivel estudiante y el efecto aleatorio del intercepto de esta variable, según escuela. Es decir, no se incorporan otras variables de nivel estudiante o escuela al modelo, más que el conocimiento cívico e id de las escuelas. El modelo fue ajustado a partir de una muestra de 4846 estudiantes anidados en 171 escuelas. 
@@ -254,7 +251,7 @@ El estimador que da cuenta de la proporción entre factores de nivel individual 
 
 ### Comparación de modelos 
 
-![Influencia de la socialización de la familia y la escuela](../output/graphs/reg1.png)
+![Influencia de la socialización de la familia y la escuela](https://raw.githubusercontent.com/vjimeneza/educivic/master/output/graphs/reg1.png)
 
 Se desarrollaron seis modelos que incorporan progresivamente las variables relevantes para el análisis. El modelo 1 incorpora solo variables individuales (género, origen socioeconómico). El modelo 2 integra variables sobre las cuales el colegio tiene poca injerencia, las cuales denominaremos variables estructurales (i.e. género del estudiante, origen socioeconómico del estudiante, promedio del origen socioeconómico). Los modelos siguientes integran variables sobre el ambiente escolar: el modelo 2 incorpora variables relacionadas con un _ambiente democrático_ (i.e. actitudes a la participación, apertura a la discusión y espacios participativos). El modelo 3 referidas al _clima escolar_ (i.e. relación con los profesores y entre los estudiantes), el modelo 4 incorpora las variables de ambiente democrático y de clima escolar. El modelo 5, por último, incorpora todas las variables (Tabla 2).
 
@@ -285,7 +282,7 @@ Al incorporarse las variables de nivel 2, se reconoce la misma relación entre v
 
 ### Comparación de modelos 6-8 
 
-```{r results='asis'}
+```{r results='asis', echo=FALSE}
 library(texreg)
 
 load(file = "../output/graphs/results_6.Rdata")
@@ -307,7 +304,7 @@ Finalmente, cabe preguntarse ¿Alguna de las variables de nivel 2, vale decir, d
 Cabe señalar que este ejercicio se realizó con las variables de clima escolar y de cultura participativa, obteniéndose resultados similares. En consideración de esto podemos decir que ninguna de las variables revisadas en este artículo son capaces de explicar la variación de la pendiente aleatorizada entre origen socioeconómico y conocimiento cívico. 
 
 
-![Interacción entre conocimiento cívico y nivel socioeconómico del estudiante y colegio](../output/graphs/interaccion.png) 
+![Interacción entre conocimiento cívico y nivel socioeconómico del estudiante y colegio](https://raw.githubusercontent.com/vjimeneza/educivic/master/output/graphs/interaccion.png) 
 
 
 ### Ajuste de los modelos: Ajuste por proporción de varianzas 
