@@ -1,3 +1,4 @@
+
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
@@ -22,7 +23,7 @@ pacman::p_load(lme4,
 load(file="../input/data/proc/data.Rdata")
 ```
 
-# AnC!lisis descriptivo
+# Analisis descriptivo
 ```{r}
 summary(data)
 ```

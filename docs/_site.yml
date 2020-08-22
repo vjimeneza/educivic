@@ -1,16 +1,20 @@
-name: "meritredist2019"
-output_dir: "." # Esto es para que se compile en el rootdir
+name: "Educacioncivica"
 
+output_dir: "."
 
 navbar:
-  title: "Practicas escolares contra la desigualdad politica"
-  right:
-    - text: "Artículo"
-      href: "paper.html"
-
-
-
+  title: "Practicas Escolares contra la desigualdad"
+  left:
+  - text: "Analisis de datos"
+    href: "../processing/prod_analysis.html"
+  - text: "Articulo"
+    href: paper.html
+  - icon: fa-envelope fa-lg
+    href: mailto:francisco.meneses@ug.uchile.cl
+  - icon: fa-github fa-lg
+    href: https://github.com/vjimeneza/educivic
+    
 output:
   html_document:
-    css: "../input/css/custom.css"
     theme: united
+    css: "../input/css/custom.css"
