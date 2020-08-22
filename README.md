@@ -1,4 +1,5 @@
-En el siguiente enlace puede acceder al artículo del estudio ¿Qué pueden hacer las escuelas para disminuir la desigualdad en el conocimiento cívico?, trabajo realizado en el marco del curso de Análisis Multinivel, dictado por el profesor Juan Carlos Castillo durante el segundo semestre de 2019 en la Facultad de Ciencias Sociales. Es relación a la autoría, esta corresponde a personas diferentes
+En el siguiente enlace puede acceder al artículo del estudio
+[¿Qué pueden hacer las escuelas para disminuir la desigualdad en el conocimiento cívico?](https://vjimeneza.github.io/educivic/index.html), trabajo realizado en el marco del curso de Análisis Multinivel, dictado por el profesor Juan Carlos Castillo durante el segundo semestre de 2019 en la Facultad de Ciencias Sociales. Es relación a la autoría, esta corresponde a personas diferentes
 a quienes editaron el presente trabajo para su publicación en la forma enseñada en la cátedra "Ciencia Social Abierta".
 Autores: Anais Herrera, Francisco Meneses, Víctor Jiménez, Catalina Flores y Alejandra Delaveau 
 Editores: Yanara Jerez, Adonai Arancibia, Anais Herrera, Francisco Meneses y VíctorJiménez
